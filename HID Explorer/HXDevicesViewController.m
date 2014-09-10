@@ -6,12 +6,22 @@
 //  Copyright (c) 2014 ars draconis. All rights reserved.
 //
 
+
+#import <HIDKit/HIDKit.h>
 #import "HXDevicesViewController.h"
 
+
+//------------------------------------------------------------------------------
+#pragma mark Class Extension
+//------------------------------------------------------------------------------
 @interface HXDevicesViewController ()
 
 @end
 
+
+//------------------------------------------------------------------------------
+#pragma mark Implementation
+//------------------------------------------------------------------------------
 @implementation HXDevicesViewController
 
 - (void)viewDidLoad {

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1612F73A19C0733D000122E9 /* HXDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1612F73919C0733D000122E9 /* HXDevicesViewController.m */; };
 		1671451F19C041F4008881D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671451E19C041F4008881D3 /* main.m */; };
-		1671452219C041F4008881D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671452119C041F4008881D3 /* ViewController.m */; };
 		1671452519C041F4008881D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671452419C041F4008881D3 /* AppDelegate.m */; };
 		1671452719C041F4008881D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1671452619C041F4008881D3 /* Images.xcassets */; };
 		1671452A19C041F4008881D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1671452819C041F4008881D3 /* Main.storyboard */; };
@@ -41,11 +41,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1612F73819C0733D000122E9 /* HXDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDevicesViewController.h; sourceTree = "<group>"; };
+		1612F73919C0733D000122E9 /* HXDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDevicesViewController.m; sourceTree = "<group>"; };
 		1671451919C041F4008881D3 /* HID Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HID Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1671451D19C041F4008881D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1671451E19C041F4008881D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1671452019C041F4008881D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1671452119C041F4008881D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1671452319C041F4008881D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1671452419C041F4008881D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1671452619C041F4008881D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -96,13 +96,13 @@
 		1671451B19C041F4008881D3 /* HID Explorer */ = {
 			isa = PBXGroup;
 			children = (
-				1671452019C041F4008881D3 /* ViewController.h */,
-				1671452119C041F4008881D3 /* ViewController.m */,
 				1671452319C041F4008881D3 /* AppDelegate.h */,
 				1671452419C041F4008881D3 /* AppDelegate.m */,
 				1671452619C041F4008881D3 /* Images.xcassets */,
 				1671452819C041F4008881D3 /* Main.storyboard */,
 				1671451C19C041F4008881D3 /* Supporting Files */,
+				1612F73819C0733D000122E9 /* HXDevicesViewController.h */,
+				1612F73919C0733D000122E9 /* HXDevicesViewController.m */,
 			);
 			path = "HID Explorer";
 			sourceTree = "<group>";
@@ -234,8 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1671452219C041F4008881D3 /* ViewController.m in Sources */,
 				1671451F19C041F4008881D3 /* main.m in Sources */,
+				1612F73A19C0733D000122E9 /* HXDevicesViewController.m in Sources */,
 				1671452519C041F4008881D3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +431,7 @@
 				1671453B19C041F4008881D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1671453C19C041F4008881D3 /* Build configuration list for PBXNativeTarget "HID ExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +440,7 @@
 				1671453E19C041F4008881D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

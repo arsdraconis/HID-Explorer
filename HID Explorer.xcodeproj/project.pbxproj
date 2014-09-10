@@ -13,6 +13,8 @@
 		1671452719C041F4008881D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1671452619C041F4008881D3 /* Images.xcassets */; };
 		1671452A19C041F4008881D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1671452819C041F4008881D3 /* Main.storyboard */; };
 		1671453619C041F4008881D3 /* HID_ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671453519C041F4008881D3 /* HID_ExplorerTests.m */; };
+		1671454019C04206008881D3 /* HIDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; };
+		1671454219C0425A008881D3 /* HIDKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +26,19 @@
 			remoteInfo = "HID Explorer";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1671454119C0424C008881D3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1671454219C0425A008881D3 /* HIDKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1671451919C041F4008881D3 /* HID Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HID Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +53,7 @@
 		1671452F19C041F4008881D3 /* HID ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HID ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1671453419C041F4008881D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1671453519C041F4008881D3 /* HID_ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HID_ExplorerTests.m; sourceTree = "<group>"; };
+		1671453F19C04206008881D3 /* HIDKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDKit.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug/HIDKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1671454019C04206008881D3 /* HIDKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +110,7 @@
 		1671451C19C041F4008881D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1671453F19C04206008881D3 /* HIDKit.framework */,
 				1671451D19C041F4008881D3 /* Info.plist */,
 				1671451E19C041F4008881D3 /* main.m */,
 			);
@@ -126,6 +144,7 @@
 				1671451519C041F4008881D3 /* Sources */,
 				1671451619C041F4008881D3 /* Frameworks */,
 				1671451719C041F4008881D3 /* Resources */,
+				1671454119C0424C008881D3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -332,6 +351,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug",
+				);
 				INFOPLIST_FILE = "HID Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -343,6 +366,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug",
+				);
 				INFOPLIST_FILE = "HID Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

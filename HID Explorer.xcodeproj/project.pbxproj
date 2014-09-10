@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1671451F19C041F4008881D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671451E19C041F4008881D3 /* main.m */; };
+		1671452219C041F4008881D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671452119C041F4008881D3 /* ViewController.m */; };
+		1671452519C041F4008881D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671452419C041F4008881D3 /* AppDelegate.m */; };
+		1671452719C041F4008881D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1671452619C041F4008881D3 /* Images.xcassets */; };
+		1671452A19C041F4008881D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1671452819C041F4008881D3 /* Main.storyboard */; };
+		1671453619C041F4008881D3 /* HID_ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671453519C041F4008881D3 /* HID_ExplorerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1671453019C041F4008881D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1671451119C041F4008881D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1671451819C041F4008881D3;
+			remoteInfo = "HID Explorer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1671451919C041F4008881D3 /* HID Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HID Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1671451D19C041F4008881D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1671451E19C041F4008881D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1671452019C041F4008881D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1671452119C041F4008881D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1671452319C041F4008881D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1671452419C041F4008881D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1671452619C041F4008881D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1671452919C041F4008881D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1671452F19C041F4008881D3 /* HID ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HID ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1671453419C041F4008881D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1671453519C041F4008881D3 /* HID_ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HID_ExplorerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1671451619C041F4008881D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1671452C19C041F4008881D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1671451019C041F4008881D3 = {
+			isa = PBXGroup;
+			children = (
+				1671451B19C041F4008881D3 /* HID Explorer */,
+				1671453219C041F4008881D3 /* HID ExplorerTests */,
+				1671451A19C041F4008881D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1671451A19C041F4008881D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1671451919C041F4008881D3 /* HID Explorer.app */,
+				1671452F19C041F4008881D3 /* HID ExplorerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1671451B19C041F4008881D3 /* HID Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				1671452019C041F4008881D3 /* ViewController.h */,
+				1671452119C041F4008881D3 /* ViewController.m */,
+				1671452319C041F4008881D3 /* AppDelegate.h */,
+				1671452419C041F4008881D3 /* AppDelegate.m */,
+				1671452619C041F4008881D3 /* Images.xcassets */,
+				1671452819C041F4008881D3 /* Main.storyboard */,
+				1671451C19C041F4008881D3 /* Supporting Files */,
+			);
+			path = "HID Explorer";
+			sourceTree = "<group>";
+		};
+		1671451C19C041F4008881D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1671451D19C041F4008881D3 /* Info.plist */,
+				1671451E19C041F4008881D3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1671453219C041F4008881D3 /* HID ExplorerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1671453519C041F4008881D3 /* HID_ExplorerTests.m */,
+				1671453319C041F4008881D3 /* Supporting Files */,
+			);
+			path = "HID ExplorerTests";
+			sourceTree = "<group>";
+		};
+		1671453319C041F4008881D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1671453419C041F4008881D3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1671451819C041F4008881D3 /* HID Explorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1671453919C041F4008881D3 /* Build configuration list for PBXNativeTarget "HID Explorer" */;
+			buildPhases = (
+				1671451519C041F4008881D3 /* Sources */,
+				1671451619C041F4008881D3 /* Frameworks */,
+				1671451719C041F4008881D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HID Explorer";
+			productName = "HID Explorer";
+			productReference = 1671451919C041F4008881D3 /* HID Explorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1671452E19C041F4008881D3 /* HID ExplorerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1671453C19C041F4008881D3 /* Build configuration list for PBXNativeTarget "HID ExplorerTests" */;
+			buildPhases = (
+				1671452B19C041F4008881D3 /* Sources */,
+				1671452C19C041F4008881D3 /* Frameworks */,
+				1671452D19C041F4008881D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1671453119C041F4008881D3 /* PBXTargetDependency */,
+			);
+			name = "HID ExplorerTests";
+			productName = "HID ExplorerTests";
+			productReference = 1671452F19C041F4008881D3 /* HID ExplorerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1671451119C041F4008881D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "ars draconis";
+				TargetAttributes = {
+					1671451819C041F4008881D3 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					1671452E19C041F4008881D3 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 1671451819C041F4008881D3;
+					};
+				};
+			};
+			buildConfigurationList = 1671451419C041F4008881D3 /* Build configuration list for PBXProject "HID Explorer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1671451019C041F4008881D3;
+			productRefGroup = 1671451A19C041F4008881D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1671451819C041F4008881D3 /* HID Explorer */,
+				1671452E19C041F4008881D3 /* HID ExplorerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1671451719C041F4008881D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1671452719C041F4008881D3 /* Images.xcassets in Resources */,
+				1671452A19C041F4008881D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1671452D19C041F4008881D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1671451519C041F4008881D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1671452219C041F4008881D3 /* ViewController.m in Sources */,
+				1671451F19C041F4008881D3 /* main.m in Sources */,
+				1671452519C041F4008881D3 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1671452B19C041F4008881D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1671453619C041F4008881D3 /* HID_ExplorerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1671453119C041F4008881D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1671451819C041F4008881D3 /* HID Explorer */;
+			targetProxy = 1671453019C041F4008881D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1671452819C041F4008881D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1671452919C041F4008881D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1671453719C041F4008881D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1671453819C041F4008881D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1671453A19C041F4008881D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "HID Explorer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1671453B19C041F4008881D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "HID Explorer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1671453D19C041F4008881D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HID ExplorerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HID Explorer.app/Contents/MacOS/HID Explorer";
+			};
+			name = Debug;
+		};
+		1671453E19C041F4008881D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HID ExplorerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HID Explorer.app/Contents/MacOS/HID Explorer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1671451419C041F4008881D3 /* Build configuration list for PBXProject "HID Explorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1671453719C041F4008881D3 /* Debug */,
+				1671453819C041F4008881D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1671453919C041F4008881D3 /* Build configuration list for PBXNativeTarget "HID Explorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1671453A19C041F4008881D3 /* Debug */,
+				1671453B19C041F4008881D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1671453C19C041F4008881D3 /* Build configuration list for PBXNativeTarget "HID ExplorerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1671453D19C041F4008881D3 /* Debug */,
+				1671453E19C041F4008881D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1671451119C041F4008881D3 /* Project object */;
+}

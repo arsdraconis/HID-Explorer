@@ -10,4 +10,7 @@
 
 @interface HXDevicesViewController : NSViewController
 
+@property IBOutlet NSArrayController *devicesArrayController;
+@property NSArray *devices;
+
 @end

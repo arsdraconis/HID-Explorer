@@ -676,9 +676,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HH-QO-uWU">
-                                <rect key="frame" x="0.0" y="64" width="480" height="270"/>
-                                <clipView key="contentView" ambiguous="YES" misplaced="YES" id="aub-jY-w9K">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HH-QO-uWU">
+                                <rect key="frame" x="0.0" y="61" width="480" height="273"/>
+                                <clipView key="contentView" misplaced="YES" id="aub-jY-w9K">
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -834,8 +834,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-13-G0c">
-                                <rect key="frame" x="14" y="16" width="88" height="32"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-13-G0c">
+                                <rect key="frame" x="14" y="13" width="88" height="32"/>
                                 <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x7f-qZ-Vg5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -845,6 +845,14 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5HH-QO-uWU" secondAttribute="trailing" id="17g-CO-jFE"/>
+                            <constraint firstItem="fbf-13-G0c" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="XgM-JL-rKs"/>
+                            <constraint firstAttribute="bottom" secondItem="fbf-13-G0c" secondAttribute="bottom" constant="20" symbolic="YES" id="Yk4-Ok-iGL"/>
+                            <constraint firstItem="5HH-QO-uWU" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="jyD-mR-vf1"/>
+                            <constraint firstItem="fbf-13-G0c" firstAttribute="top" secondItem="5HH-QO-uWU" secondAttribute="bottom" constant="20" symbolic="YES" id="lZ3-Ey-Dr7"/>
+                            <constraint firstItem="5HH-QO-uWU" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="wBX-2l-I8P"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="devicesArrayController" destination="Ssh-Ia-ix9" id="PXS-tB-xKc"/>

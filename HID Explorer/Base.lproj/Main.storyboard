@@ -677,14 +677,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HH-QO-uWU">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HH-QO-uWU">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                                <clipView key="contentView" ambiguous="YES" misplaced="YES" id="aub-jY-w9K">
+                                <clipView key="contentView" misplaced="YES" id="aub-jY-w9K">
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="4JS-6A-7LH" viewBased="YES" id="d3U-HB-hMK">
-                                            <rect key="frame" x="0.0" y="0.0" width="238" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -817,6 +816,12 @@
                                 </tableHeaderView>
                             </scrollView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="5HH-QO-uWU" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="IZ5-yr-nXf"/>
+                            <constraint firstItem="5HH-QO-uWU" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="NiX-3L-Tf2"/>
+                            <constraint firstAttribute="trailing" secondItem="5HH-QO-uWU" secondAttribute="trailing" id="OhX-0q-xcR"/>
+                            <constraint firstAttribute="bottom" secondItem="5HH-QO-uWU" secondAttribute="bottom" id="amj-IJ-8uy"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="devicesArrayController" destination="Ssh-Ia-ix9" id="PXS-tB-xKc"/>

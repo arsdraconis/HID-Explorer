@@ -12,5 +12,8 @@
 
 @property IBOutlet NSArrayController *devicesArrayController;
 @property NSArray *devices;
+@property IBOutlet NSTableView *table;
+
+- (void)tableWasDoubleClicked;
 
 @end

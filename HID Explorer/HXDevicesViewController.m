@@ -30,15 +30,15 @@
 
 - (void)viewWillAppear
 {
-	[self refreshDevices];
+	[self refreshDevices:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(refreshDevices)
+											 selector:@selector(refreshDevices:)
 												 name:HIDManagerDeviceDidConnectNotification
 											   object:[HIDManager sharedManager]];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(refreshDevices)
+											 selector:@selector(refreshDevices:)
 												 name:HIDManagerDeviceDidDisconnectNotification
 											   object:[HIDManager sharedManager]];
 }
@@ -55,9 +55,18 @@
 	
 }
 
-- (void)refreshDevices
+- (IBAction)refreshDevices:(id)sender
 {
 	[self.devicesArrayController setContent:[HIDManager devices]];
+}
+
+- (void)tableWasDoubleClicked
+{
+	NSInteger row = self.table.selectedRow;
+	if (row > -1)
+	{
+		NSLog(@"Double clicked row %ld", row);
+	}
 }
 
 @end

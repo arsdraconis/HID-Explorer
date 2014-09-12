@@ -14,6 +14,7 @@
 @property NSArray *devices;
 @property IBOutlet NSTableView *table;
 
+- (IBAction)refreshDevices:(id)sender;
 - (void)tableWasDoubleClicked;
 
 @end

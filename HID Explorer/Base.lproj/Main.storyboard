@@ -812,6 +812,11 @@
                                             </tableColumns>
                                             <connections>
                                                 <binding destination="Ssh-Ia-ix9" name="content" keyPath="arrangedObjects" id="KhS-Fm-YBx"/>
+                                                <binding destination="XfG-lQ-9wD" name="doubleClickTarget" keyPath="self" id="URb-kt-YrS">
+                                                    <dictionary key="options">
+                                                        <string key="NSSelectorName">tableWasDoubleClicked</string>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </tableView>
                                     </subviews>
@@ -840,6 +845,7 @@
                     </view>
                     <connections>
                         <outlet property="devicesArrayController" destination="Ssh-Ia-ix9" id="PXS-tB-xKc"/>
+                        <outlet property="table" destination="d3U-HB-hMK" id="8a3-p4-7Et"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

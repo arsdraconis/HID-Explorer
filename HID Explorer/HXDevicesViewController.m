@@ -26,9 +26,26 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+}
+
+- (void)viewWillAppear
+{
+	[self refreshDevices];
 	
-	[self.devicesArrayController setContent:[HIDManager devices]];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(refreshDevices)
+												 name:HIDManagerDeviceDidConnectNotification
+											   object:[HIDManager sharedManager]];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(refreshDevices)
+												 name:HIDManagerDeviceDidDisonnectNotification
+											   object:[HIDManager sharedManager]];
+}
+
+- (void)viewDidDisappear
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -36,6 +53,11 @@
 	
 	// Update the view, if already loaded.
 	
+}
+
+- (void)refreshDevices
+{
+	[self.devicesArrayController setContent:[HIDManager devices]];
 }
 
 @end

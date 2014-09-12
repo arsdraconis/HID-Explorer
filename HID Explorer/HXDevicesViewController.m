@@ -39,7 +39,7 @@
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(refreshDevices)
-												 name:HIDManagerDeviceDidDisonnectNotification
+												 name:HIDManagerDeviceDidDisconnectNotification
 											   object:[HIDManager sharedManager]];
 }
 

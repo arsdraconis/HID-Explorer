@@ -11,7 +11,7 @@
 @interface HXDevicesViewController : NSViewController
 
 @property IBOutlet NSArrayController *devicesArrayController;
-@property NSArray *devices;
+@property NSMutableArray *devices;
 @property IBOutlet NSTableView *table;
 
 - (IBAction)refreshDevices:(id)sender;

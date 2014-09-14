@@ -47,7 +47,12 @@
 
 - (void)viewDidDisappear
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:HIDManagerDeviceDidConnectNotification
+												  object:nil];
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:HIDManagerDeviceDidDisconnectNotification
+												  object:nil];
 }
 
 - (void)dealloc
@@ -77,7 +82,9 @@
 - (void)deviceDidDisconnect:(NSNotification *)note
 {
 	NSLog(@"Removing a device from the table...");
-	[self.devicesArrayController removeObject:note.object];
+	@autoreleasepool {
+		[self.devicesArrayController removeObject:note.object];
+	}
 }
 
 - (void)tableWasDoubleClicked

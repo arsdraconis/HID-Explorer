@@ -877,5 +877,36 @@
             </objects>
             <point key="canvasLocation" x="75" y="687"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="Iku-Ok-X0G">
+            <objects>
+                <windowController id="gXr-bt-w3y" sceneMemberID="viewController">
+                    <window key="window" title="Device" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="LeH-xb-Ug8">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="bvJ-1F-Bk2" kind="relationship" relationship="window.shadowedContentViewController" id="6hV-4d-EfO"/>
+                    </connections>
+                </windowController>
+                <customObject id="YdR-3p-8W3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="250"/>
+        </scene>
+        <!--Device View Controller-->
+        <scene sceneID="DV1-sY-4cl">
+            <objects>
+                <viewController id="bvJ-1F-Bk2" customClass="HXDeviceViewController" sceneMemberID="viewController">
+                    <view key="view" id="Loj-aN-61U">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="Bqo-Ub-7Me" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="655"/>
+        </scene>
     </scenes>
 </document>

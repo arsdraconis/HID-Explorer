@@ -15,6 +15,7 @@
 		1671453619C041F4008881D3 /* HID_ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671453519C041F4008881D3 /* HID_ExplorerTests.m */; };
 		1671454019C04206008881D3 /* HIDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; };
 		1671454219C0425A008881D3 /* HIDKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16E9DA0C19C99E01005E193B /* HXDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		1671453419C041F4008881D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1671453519C041F4008881D3 /* HID_ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HID_ExplorerTests.m; sourceTree = "<group>"; };
 		1671453F19C04206008881D3 /* HIDKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDKit.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug/HIDKit.framework"; sourceTree = "<group>"; };
+		16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDeviceViewController.h; sourceTree = "<group>"; };
+		16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDeviceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				1671451C19C041F4008881D3 /* Supporting Files */,
 				1612F73819C0733D000122E9 /* HXDevicesViewController.h */,
 				1612F73919C0733D000122E9 /* HXDevicesViewController.m */,
+				16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */,
+				16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */,
 			);
 			path = "HID Explorer";
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			files = (
 				1671451F19C041F4008881D3 /* main.m in Sources */,
 				1612F73A19C0733D000122E9 /* HXDevicesViewController.m in Sources */,
+				16E9DA0C19C99E01005E193B /* HXDeviceViewController.m in Sources */,
 				1671452519C041F4008881D3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

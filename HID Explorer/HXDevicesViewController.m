@@ -8,7 +8,9 @@
 
 
 #import <HIDKit/HIDKit.h>
+#import "AppDelegate.h"
 #import "HXDevicesViewController.h"
+#import "HXWindowManager.h"
 
 
 //------------------------------------------------------------------------------
@@ -41,10 +43,6 @@
 											   object:nil];
 }
 
-- (void)viewWillAppear
-{
-}
-
 - (void)viewDidDisappear
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self
@@ -53,18 +51,6 @@
 	[[NSNotificationCenter defaultCenter] removeObserver:self
 													name:HIDManagerDeviceDidDisconnectNotification
 												  object:nil];
-}
-
-- (void)dealloc
-{
-	
-}
-
-- (void)setRepresentedObject:(id)representedObject {
-	[super setRepresentedObject:representedObject];
-	
-	// Update the view, if already loaded.
-	
 }
 
 - (IBAction)refreshDevices:(id)sender
@@ -92,7 +78,9 @@
 	NSInteger row = self.table.selectedRow;
 	if (row > -1)
 	{
-		NSLog(@"Double clicked row %ld", row);
+		HIDDevice *selectedDevice = self.devicesArrayController.arrangedObjects[row];
+		AppDelegate *delegate = ((NSApplication *)NSApp).delegate;
+		[delegate.windowManager windowForDevice:selectedDevice];
 	}
 }
 

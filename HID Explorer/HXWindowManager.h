@@ -10,7 +10,7 @@
 
 @class HIDDevice;
 
-@interface HXWindowManager : NSObject
+@interface HXWindowManager : NSObject <NSWindowDelegate>
 
 - (void)windowForDevice:(HIDDevice *)device;
 

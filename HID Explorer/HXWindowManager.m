@@ -15,7 +15,8 @@
 //------------------------------------------------------------------------------
 @interface HXWindowManager ()
 
-@property NSMutableArray *windowControllers;
+@property (readonly) NSMutableArray *windowControllers;
+@property NSPoint cascadePoint;
 
 @end
 
@@ -31,6 +32,7 @@
 	if (self)
 	{
 		_windowControllers = [NSMutableArray array];
+		_cascadePoint = NSZeroPoint;
 	}
 	return self;
 }
@@ -57,11 +59,22 @@
 		wc = [sb instantiateInitialController];
 		[_windowControllers addObject:wc];
 		wc.window.contentViewController.representedObject = device;
+		[self cascadeWindow:wc.window];
 		wc.window.delegate = self;
 		[device open];
 	}
 	
 	[wc showWindow:nil];
+}
+
+- (void)cascadeWindow:(NSWindow *)window
+{
+	if (self.cascadePoint.x == 0 && self.cascadePoint.y == 0)
+	{
+		self.cascadePoint = window.frame.origin;
+	}
+	
+	self.cascadePoint = [window cascadeTopLeftFromPoint:self.cascadePoint];
 }
 
 - (void)windowWillClose:(NSNotification *)notification

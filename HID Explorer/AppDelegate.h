@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class HXWindowManager;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property HXWindowManager *windowManager;
 
 @end
 

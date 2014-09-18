@@ -43,6 +43,11 @@
 											   object:nil];
 }
 
+- (void)viewWillAppear
+{
+	[self refreshDevices:self];
+}
+
 - (void)viewDidDisappear
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self

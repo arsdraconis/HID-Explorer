@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="14A361c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="JYB-Vt-tSD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6246"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="9gH-15-WwV">
+            <objects>
+                <windowController storyboardIdentifier="DeviceWindowController" id="JYB-Vt-tSD" sceneMemberID="viewController">
+                    <window key="window" title="Device" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="qio-rW-vby">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="518" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="obC-1z-Qna" kind="relationship" relationship="window.shadowedContentViewController" id="hFI-Ju-hd2"/>
+                    </connections>
+                </windowController>
+                <customObject id="g5z-rk-XKO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="-208"/>
+        </scene>
+        <!--Device View Controller-->
+        <scene sceneID="yYx-5D-s4E">
+            <objects>
+                <viewController storyboardIdentifier="DeviceViewController" id="obC-1z-Qna" customClass="HXDeviceViewController" sceneMemberID="viewController">
+                    <view key="view" id="0m9-Gg-mh8">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="oRP-LY-atM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="250"/>
+        </scene>
+    </scenes>
+</document>

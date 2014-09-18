@@ -18,6 +18,12 @@
     [super windowDidLoad];
 	
 	[self.window setExcludedFromWindowsMenu:YES];
+	self.window.delegate = self;
+}
+
+- (void)windowWillClose:(NSNotification *)notification
+{
+	[self dismissController:self];
 }
 
 @end

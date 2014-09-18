@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface HXDevicesWindowController : NSWindowController
+@interface HXDevicesWindowController : NSWindowController <NSWindowDelegate>
 
 @end

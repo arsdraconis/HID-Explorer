@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1612F73A19C0733D000122E9 /* HXDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1612F73919C0733D000122E9 /* HXDevicesViewController.m */; };
 		166C340F19CAC69B000C3A0B /* HXWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 166C340E19CAC69B000C3A0B /* HXWindowManager.m */; };
+		166C341219CAF7D0000C3A0B /* HXDevicesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166C341119CAF7D0000C3A0B /* HXDevicesWindowController.m */; };
 		1671451F19C041F4008881D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671451E19C041F4008881D3 /* main.m */; };
 		1671452519C041F4008881D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671452419C041F4008881D3 /* AppDelegate.m */; };
 		1671452719C041F4008881D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1671452619C041F4008881D3 /* Images.xcassets */; };
@@ -48,6 +49,8 @@
 		1612F73919C0733D000122E9 /* HXDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDevicesViewController.m; sourceTree = "<group>"; };
 		166C340D19CAC69B000C3A0B /* HXWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWindowManager.h; sourceTree = "<group>"; };
 		166C340E19CAC69B000C3A0B /* HXWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWindowManager.m; sourceTree = "<group>"; };
+		166C341019CAF7D0000C3A0B /* HXDevicesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDevicesWindowController.h; sourceTree = "<group>"; };
+		166C341119CAF7D0000C3A0B /* HXDevicesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDevicesWindowController.m; sourceTree = "<group>"; };
 		1671451919C041F4008881D3 /* HID Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HID Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1671451D19C041F4008881D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1671451E19C041F4008881D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,12 +107,14 @@
 		1671451B19C041F4008881D3 /* HID Explorer */ = {
 			isa = PBXGroup;
 			children = (
-				1671452319C041F4008881D3 /* AppDelegate.h */,
-				1671452419C041F4008881D3 /* AppDelegate.m */,
 				1671452619C041F4008881D3 /* Images.xcassets */,
 				1671452819C041F4008881D3 /* Main.storyboard */,
-				16E9DA0D19C9A856005E193B /* DeviceWindow.storyboard */,
+				1671452319C041F4008881D3 /* AppDelegate.h */,
+				1671452419C041F4008881D3 /* AppDelegate.m */,
+				166C341019CAF7D0000C3A0B /* HXDevicesWindowController.h */,
+				166C341119CAF7D0000C3A0B /* HXDevicesWindowController.m */,
 				1671451C19C041F4008881D3 /* Supporting Files */,
+				16E9DA0D19C9A856005E193B /* DeviceWindow.storyboard */,
 				1612F73819C0733D000122E9 /* HXDevicesViewController.h */,
 				1612F73919C0733D000122E9 /* HXDevicesViewController.m */,
 				16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */,
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1671451F19C041F4008881D3 /* main.m in Sources */,
+				166C341219CAF7D0000C3A0B /* HXDevicesWindowController.m in Sources */,
 				1612F73A19C0733D000122E9 /* HXDevicesViewController.m in Sources */,
 				166C340F19CAC69B000C3A0B /* HXWindowManager.m in Sources */,
 				16E9DA0C19C99E01005E193B /* HXDeviceViewController.m in Sources */,

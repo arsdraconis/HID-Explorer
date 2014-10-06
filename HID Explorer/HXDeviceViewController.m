@@ -10,21 +10,43 @@
 #import <HIDKit/HIDKit.h>
 #import "HXDeviceViewController.h"
 
+
+//------------------------------------------------------------------------------
+#pragma mark Private Class Extension
+//------------------------------------------------------------------------------
 @interface HXDeviceViewController ()
 
 @end
 
-@implementation HXDeviceViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-}
+//------------------------------------------------------------------------------
+#pragma mark Implementation
+//------------------------------------------------------------------------------
+@implementation HXDeviceViewController
 
 - (void)setRepresentedObject:(id)representedObject
 {
 	[super setRepresentedObject:representedObject];
 	self.view.window.title = ((HIDDevice *)representedObject).product;
 }
+
+
+//------------------------------------------------------------------------------
+#pragma mark View Lifecycle
+//------------------------------------------------------------------------------
+- (void)viewDidAppear
+{
+	NSLog(@"Opening device.");
+	HIDDevice *device = self.representedObject;
+	[device open];
+}
+
+- (void)viewDidDisappear
+{
+	NSLog(@"Closing device.");
+	HIDDevice *device = self.representedObject;
+	[device close];
+}
+
 
 @end

@@ -14,4 +14,5 @@
 @property IBOutlet NSTextField *manufacturerLabel;
 @property IBOutlet NSTextField *transportLabel;
 
+
 @end

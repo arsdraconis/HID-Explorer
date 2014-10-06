@@ -36,20 +36,30 @@
 	self.transportLabel.stringValue = device.transport;
 }
 
+- (IBAction)setShouldLiveUpdate:(id)sender
+{
+	NSButton *checkBox = (NSButton *)sender;
+	if (checkBox.state == NSOnState)
+	{
+		NSLog(@"Will allow live updating.");
+	}
+	else
+	{
+		NSLog(@"Will not allow live updating.");
+	}
+}
 
 //------------------------------------------------------------------------------
 #pragma mark View Lifecycle
 //------------------------------------------------------------------------------
 - (void)viewDidAppear
 {
-	NSLog(@"Opening device.");
 	HIDDevice *device = self.representedObject;
 	[device open];
 }
 
 - (void)viewDidDisappear
 {
-	NSLog(@"Closing device.");
 	HIDDevice *device = self.representedObject;
 	[device close];
 }

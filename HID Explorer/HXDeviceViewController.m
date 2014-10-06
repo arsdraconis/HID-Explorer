@@ -27,7 +27,13 @@
 - (void)setRepresentedObject:(id)representedObject
 {
 	[super setRepresentedObject:representedObject];
-	self.view.window.title = ((HIDDevice *)representedObject).product;
+	HIDDevice *device = (HIDDevice *)representedObject;
+	
+	self.view.window.title = [NSString stringWithFormat:@"%@ device: %@", device.transport, device.product];
+	
+	self.nameLabel.stringValue = device.product;
+	self.manufacturerLabel.stringValue = device.manufacturer;
+	self.transportLabel.stringValue = device.transport;
 }
 
 

@@ -10,4 +10,8 @@
 
 @interface HXDeviceViewController : NSViewController
 
+@property IBOutlet NSTextField *nameLabel;
+@property IBOutlet NSTextField *manufacturerLabel;
+@property IBOutlet NSTextField *transportLabel;
+
 @end

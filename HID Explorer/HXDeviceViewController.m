@@ -76,9 +76,9 @@
 	NSArray *children = element.children;
 	if (children.count != 0)
 	{
-		for (HIDElement *element in children)
+		for (HIDElement *child in children)
 		{
-			ElementTreeNode *branch = [self builtTreeBranch:element];
+			ElementTreeNode *branch = [self builtTreeBranch:child];
 			[node.mutableChildNodes addObject:branch];
 		}
 	}

@@ -8,6 +8,8 @@
 
 
 #import <HIDKit/HIDKit.h>
+#import "ElementTreeNode.h"
+
 #import "HXDeviceViewController.h"
 
 
@@ -34,6 +36,8 @@
 	self.nameLabel.stringValue = device.product;
 	self.manufacturerLabel.stringValue = device.manufacturer;
 	self.transportLabel.stringValue = device.transport;
+	
+	[self buildElementTree:device];
 }
 
 - (IBAction)setShouldLiveUpdate:(id)sender
@@ -47,6 +51,39 @@
 	{
 		NSLog(@"Will not allow live updating.");
 	}
+}
+
+//------------------------------------------------------------------------------
+#pragma mark Building the Element Tree
+//------------------------------------------------------------------------------
+- (void)buildElementTree:(HIDDevice *)device
+{
+	ElementTreeNode *temp = [ElementTreeNode treeNodeWithRepresentedObject:nil];
+	
+	for (HIDElement *element in device.elements)
+	{
+		ElementTreeNode *node = [self builtTreeBranch:element];
+		[temp.mutableChildNodes addObject:node];
+	}
+	
+	self.rootNode = temp;
+}
+
+- (ElementTreeNode *)builtTreeBranch:(HIDElement *)element
+{
+	ElementTreeNode *node = [ElementTreeNode treeNodeWithRepresentedObject:element];
+	
+	NSArray *children = element.children;
+	if (children.count != 0)
+	{
+		for (HIDElement *element in children)
+		{
+			ElementTreeNode *branch = [self builtTreeBranch:element];
+			[node.mutableChildNodes addObject:branch];
+		}
+	}
+	
+	return node;
 }
 
 //------------------------------------------------------------------------------

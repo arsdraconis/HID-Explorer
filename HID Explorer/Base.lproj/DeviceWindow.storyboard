@@ -91,7 +91,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="PyI-LV-KQE" name="value" keyPath="objectValue.name" id="OFO-sw-GRx"/>
+                                                                        <binding destination="PyI-LV-KQE" name="value" keyPath="objectValue.name" id="X09-pz-wtK"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -125,6 +125,9 @@
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="8Kl-mq-85Q" name="value" keyPath="objectValue.type" id="eTc-iQ-Mku"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -133,7 +136,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="100" minWidth="40" maxWidth="1000" id="2f3-T7-KEZ">
+                                                <tableColumn width="209" minWidth="40" maxWidth="1000" id="2f3-T7-KEZ">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Cookie">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -158,7 +161,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="SsW-y5-tFK" name="value" keyPath="objectValue.cookie" id="3aK-ZT-AKH"/>
+                                                                        <binding destination="SsW-y5-tFK" name="value" keyPath="objectValue.cookie" id="LJT-VM-GJL"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -281,9 +284,9 @@
                     </connections>
                 </viewController>
                 <customObject id="oRP-LY-atM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <treeController objectClassName="HIDElement" editable="NO" childrenKeyPath="children" id="9FY-eH-tx3" userLabel="Device Elements Tree Controller">
+                <treeController objectClassName="ElementTreeNode" editable="NO" childrenKeyPath="childNodes" leafKeyPath="isLeaf" avoidsEmptySelection="NO" id="9FY-eH-tx3" userLabel="Device Elements Tree Controller">
                     <connections>
-                        <binding destination="obC-1z-Qna" name="contentArray" keyPath="representedObject.elements" id="4bL-s8-3gB"/>
+                        <binding destination="obC-1z-Qna" name="contentArray" keyPath="self.rootNode.childNodes" id="49y-WR-5yt"/>
                     </connections>
                 </treeController>
             </objects>

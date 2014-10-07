@@ -16,5 +16,7 @@
 
 @property IBOutlet NSOutlineView *elementsOutlineView;
 @property IBOutlet NSTreeController *elementsTreeController;
+@property IBOutlet ElementTreeNode *rootNode;
+
 
 @end

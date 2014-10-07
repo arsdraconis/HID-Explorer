@@ -111,6 +111,8 @@
 				1671452819C041F4008881D3 /* Main.storyboard */,
 				1671452319C041F4008881D3 /* AppDelegate.h */,
 				1671452419C041F4008881D3 /* AppDelegate.m */,
+				166C340D19CAC69B000C3A0B /* HXWindowManager.h */,
+				166C340E19CAC69B000C3A0B /* HXWindowManager.m */,
 				166C341019CAF7D0000C3A0B /* HXDevicesWindowController.h */,
 				166C341119CAF7D0000C3A0B /* HXDevicesWindowController.m */,
 				1612F73819C0733D000122E9 /* HXDevicesViewController.h */,
@@ -119,8 +121,6 @@
 				16E9DA0D19C9A856005E193B /* DeviceWindow.storyboard */,
 				16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */,
 				16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */,
-				166C340D19CAC69B000C3A0B /* HXWindowManager.h */,
-				166C340E19CAC69B000C3A0B /* HXWindowManager.m */,
 			);
 			path = "HID Explorer";
 			sourceTree = "<group>";

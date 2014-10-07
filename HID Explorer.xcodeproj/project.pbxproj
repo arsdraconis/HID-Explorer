@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1612F73A19C0733D000122E9 /* HXDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1612F73919C0733D000122E9 /* HXDevicesViewController.m */; };
+		1625814019E4014D000A0ADF /* ElementTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1625813F19E4014D000A0ADF /* ElementTreeNode.m */; };
 		166C340F19CAC69B000C3A0B /* HXWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 166C340E19CAC69B000C3A0B /* HXWindowManager.m */; };
 		166C341219CAF7D0000C3A0B /* HXDevicesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166C341119CAF7D0000C3A0B /* HXDevicesWindowController.m */; };
 		1671451F19C041F4008881D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671451E19C041F4008881D3 /* main.m */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		1612F73819C0733D000122E9 /* HXDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDevicesViewController.h; sourceTree = "<group>"; };
 		1612F73919C0733D000122E9 /* HXDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDevicesViewController.m; sourceTree = "<group>"; };
+		1625813E19E4014D000A0ADF /* ElementTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementTreeNode.h; sourceTree = "<group>"; };
+		1625813F19E4014D000A0ADF /* ElementTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementTreeNode.m; sourceTree = "<group>"; };
 		166C340D19CAC69B000C3A0B /* HXWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWindowManager.h; sourceTree = "<group>"; };
 		166C340E19CAC69B000C3A0B /* HXWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWindowManager.m; sourceTree = "<group>"; };
 		166C341019CAF7D0000C3A0B /* HXDevicesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDevicesWindowController.h; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				16E9DA0D19C9A856005E193B /* DeviceWindow.storyboard */,
 				16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */,
 				16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */,
+				1625813E19E4014D000A0ADF /* ElementTreeNode.h */,
+				1625813F19E4014D000A0ADF /* ElementTreeNode.m */,
 			);
 			path = "HID Explorer";
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				166C340F19CAC69B000C3A0B /* HXWindowManager.m in Sources */,
 				16E9DA0C19C99E01005E193B /* HXDeviceViewController.m in Sources */,
 				1671452519C041F4008881D3 /* AppDelegate.m in Sources */,
+				1625814019E4014D000A0ADF /* ElementTreeNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

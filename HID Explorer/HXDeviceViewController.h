@@ -14,5 +14,7 @@
 @property IBOutlet NSTextField *manufacturerLabel;
 @property IBOutlet NSTextField *transportLabel;
 
+@property IBOutlet NSOutlineView *elementsOutlineView;
+@property IBOutlet NSTreeController *elementsTreeController;
 
 @end

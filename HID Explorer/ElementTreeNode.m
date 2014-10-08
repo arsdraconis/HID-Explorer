@@ -31,7 +31,7 @@
 	switch (type)
 	{
 		case kIOHIDElementTypeInput_Misc:
-			ret = @"Misc.";
+			ret = @"Misc. Input";
 			break;
 		
 		case kIOHIDElementTypeInput_Button:
@@ -55,11 +55,14 @@
 			break;
 			
 		case kIOHIDElementTypeCollection:
-			ret = @"Collection";
+		{
+			NSString *collectionType = [self collectionTypeForElement:element];
+			ret = [NSString stringWithFormat:@"%@ Collection", collectionType];
 			break;
+		}
 			
 		default:
-			ret = @"Unknown";
+			ret = [NSString stringWithFormat:@"Unknown (%lu)", (NSUInteger)type];
 			break;
 	}
 	
@@ -71,6 +74,50 @@
 {
 	HIDElement *element = (HIDElement *)self.representedObject;
 	return (NSUInteger)element.cookie;
+}
+
+- (NSString *)collectionTypeForElement:(HIDElement *)element
+{
+	IOHIDElementCollectionType type = element.collectionType;
+	
+	NSString *ret;
+	
+	switch (type)
+	{
+		case kIOHIDElementCollectionTypeApplication:
+			ret = @"Application";
+			break;
+			
+		case kIOHIDElementCollectionTypeLogical:
+			ret = @"Logical";
+			break;
+			
+		case kIOHIDElementCollectionTypeNamedArray:
+			ret = @"Named Array";
+			break;
+			
+		case kIOHIDElementCollectionTypePhysical:
+			ret = @"Physical";
+			break;
+			
+		case kIOHIDElementCollectionTypeReport:
+			ret = @"Report";
+			break;
+			
+		case kIOHIDElementCollectionTypeUsageModifier:
+			ret = @"Usage Modifier";
+			break;
+			
+		case kIOHIDElementCollectionTypeUsageSwitch:
+			ret = @"Usage Switch";
+			break;
+			
+		default:
+			ret = [NSString stringWithFormat:@"Unknown (%lu)", (NSUInteger)type];
+			break;
+	}
+	
+	return ret;
 }
 
 @end

@@ -439,6 +439,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="setLiveUpdate:" target="fm3-Le-pxA" id="Os2-CX-6TF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

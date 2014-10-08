@@ -32,6 +32,17 @@ static const NSString *HXSelectedElementKey = @"HXSelectedElementKey";
 	// TODO: set represented object here.
 }
 
-
+- (IBAction)setLiveUpdate:(id)sender
+{
+	NSButton *checkBox = (NSButton *)sender;
+	if (checkBox.state == NSOnState)
+	{
+		NSLog(@"Live updating on.");
+	}
+	else
+	{
+		NSLog(@"Live updating off.");
+	}
+}
 
 @end

@@ -348,7 +348,7 @@
         <!--Element Inspector View Controller-->
         <scene sceneID="UwG-Ub-amG">
             <objects>
-                <viewController id="fm3-Le-pxA" userLabel="Element Inspector View Controller" sceneMemberID="viewController">
+                <viewController id="fm3-Le-pxA" userLabel="Element Inspector View Controller" customClass="HXElementInspectorViewController" sceneMemberID="viewController">
                     <view key="view" id="bfF-cZ-37G">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>

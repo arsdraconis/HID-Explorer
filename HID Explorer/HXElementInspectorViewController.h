@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 ars draconis. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
-@interface HXElementInspectorViewController : NSObject
+@interface HXElementInspectorViewController : NSViewController
 
 @end

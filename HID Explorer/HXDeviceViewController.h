@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class HIDElement, ElementTreeNode;
+
 @interface HXDeviceViewController : NSViewController
 
 @property IBOutlet NSTextField *nameLabel;
@@ -18,5 +20,6 @@
 @property IBOutlet NSTreeController *elementsTreeController;
 @property IBOutlet ElementTreeNode *rootNode;
 
+@property IBOutlet HIDElement *selectedElement;
 
 @end

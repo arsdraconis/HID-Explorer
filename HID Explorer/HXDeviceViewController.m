@@ -26,6 +26,11 @@
 //------------------------------------------------------------------------------
 @implementation HXDeviceViewController
 
+- (void)viewWillAppear
+{
+	[self setRepresentedObject:self.parentViewController.representedObject];
+}
+
 - (void)setRepresentedObject:(id)representedObject
 {
 	[super setRepresentedObject:representedObject];
@@ -56,13 +61,17 @@
 	}
 }
 
+- (IBAction)upateSelection:(id)sender
+{
+	NSArray *selection = self.elementsTreeController.selectedObjects;
+	self.selectedElement = ((ElementTreeNode *)(selection.firstObject)).representedObject;
+}
+
 - (void)didDoubleClickOutlineView
 {
 	NSInteger row = self.elementsOutlineView.selectedRow;
-	
 	if (row > -1)
-	{
-//		HIDElement *selectedElement = self.elementsTreeController.arrangedObjects[row];
+	{ 
 		[self performSegueWithIdentifier:@"showElementInspectorSegue" sender:self];
 	}
 

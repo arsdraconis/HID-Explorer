@@ -325,11 +325,11 @@
             <objects>
                 <viewController id="fm3-Le-pxA" userLabel="Element Inspector View Controller" customClass="HXElementInspectorViewController" sceneMemberID="viewController">
                     <view key="view" id="bfF-cZ-37G">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="314"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qg-k4-PNf">
-                                <rect key="frame" x="0.0" y="-2" width="480" height="272"/>
+                                <rect key="frame" x="0.0" y="42" width="480" height="272"/>
                                 <clipView key="contentView" misplaced="YES" id="Lbi-yb-ivQ">
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -433,18 +433,27 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="MOZ-aF-UFR">
+                                <rect key="frame" x="18" y="18" width="94" height="18"/>
+                                <buttonCell key="cell" type="check" title="Live update" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="0kn-av-ddv">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="9qg-k4-PNf" secondAttribute="bottom" constant="-2" id="RNP-F0-Wyf"/>
-                            <constraint firstItem="9qg-k4-PNf" firstAttribute="leading" secondItem="bfF-cZ-37G" secondAttribute="leading" id="eOw-P3-TPy"/>
-                            <constraint firstItem="9qg-k4-PNf" firstAttribute="top" secondItem="bfF-cZ-37G" secondAttribute="top" id="tca-NT-DN7"/>
-                            <constraint firstAttribute="trailing" secondItem="9qg-k4-PNf" secondAttribute="trailing" id="xGG-Oe-2PP"/>
+                            <constraint firstAttribute="bottom" secondItem="MOZ-aF-UFR" secondAttribute="bottom" constant="20" symbolic="YES" id="0aW-qf-qOm"/>
+                            <constraint firstAttribute="trailing" secondItem="9qg-k4-PNf" secondAttribute="trailing" id="11o-Fp-WYt"/>
+                            <constraint firstItem="9qg-k4-PNf" firstAttribute="top" secondItem="bfF-cZ-37G" secondAttribute="top" id="EiQ-aj-kS2"/>
+                            <constraint firstItem="MOZ-aF-UFR" firstAttribute="top" secondItem="9qg-k4-PNf" secondAttribute="bottom" constant="8" symbolic="YES" id="bko-UO-BMA"/>
+                            <constraint firstItem="MOZ-aF-UFR" firstAttribute="leading" secondItem="bfF-cZ-37G" secondAttribute="leading" constant="20" symbolic="YES" id="fFr-w4-Ufl"/>
+                            <constraint firstItem="9qg-k4-PNf" firstAttribute="leading" secondItem="bfF-cZ-37G" secondAttribute="leading" id="j5o-f8-Dty"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="6uy-b9-vNR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="541"/>
+            <point key="canvasLocation" x="1071" y="563"/>
         </scene>
     </scenes>
 </document>

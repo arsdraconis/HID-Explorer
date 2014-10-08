@@ -53,27 +53,17 @@
 	[self buildElementTree:device];
 }
 
+
 //------------------------------------------------------------------------------
 #pragma mark UI Functionality
 //------------------------------------------------------------------------------
-- (IBAction)setShouldLiveUpdate:(id)sender
-{
-	NSButton *checkBox = (NSButton *)sender;
-	if (checkBox.state == NSOnState)
-	{
-		NSLog(@"Will allow live updating.");
-	}
-	else
-	{
-		NSLog(@"Will not allow live updating.");
-	}
-}
 
 - (IBAction)upateSelection:(id)sender
 {
 	NSArray *selection = self.elementsTreeController.selectedObjects;
 	self.inspectorVC.representedObject = ((ElementTreeNode *)(selection.firstObject)).representedObject;
 }
+
 
 //------------------------------------------------------------------------------
 #pragma mark Building the Element Tree
@@ -107,6 +97,7 @@
 	
 	return node;
 }
+
 
 //------------------------------------------------------------------------------
 #pragma mark View Lifecycle

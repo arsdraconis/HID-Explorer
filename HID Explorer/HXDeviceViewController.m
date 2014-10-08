@@ -11,12 +11,14 @@
 #import "ElementTreeNode.h"
 
 #import "HXDeviceViewController.h"
-
+#import "HXElementInspectorViewController.h"
 
 //------------------------------------------------------------------------------
 #pragma mark Private Class Extension
 //------------------------------------------------------------------------------
 @interface HXDeviceViewController ()
+
+@property (weak) HXElementInspectorViewController *inspectorVC;
 
 @end
 
@@ -28,7 +30,13 @@
 
 - (void)viewWillAppear
 {
+	// Set the represented object.
 	[self setRepresentedObject:self.parentViewController.representedObject];
+	
+	// Keep a reference to our inspector view controller.
+	NSMutableArray *splitViewItems = [[((NSSplitViewController *)(self.parentViewController)) childViewControllers] mutableCopy];
+	[splitViewItems removeObject:self];
+	self.inspectorVC = splitViewItems.lastObject;
 }
 
 - (void)setRepresentedObject:(id)representedObject
@@ -64,17 +72,7 @@
 - (IBAction)upateSelection:(id)sender
 {
 	NSArray *selection = self.elementsTreeController.selectedObjects;
-	self.selectedElement = ((ElementTreeNode *)(selection.firstObject)).representedObject;
-}
-
-- (void)didDoubleClickOutlineView
-{
-	NSInteger row = self.elementsOutlineView.selectedRow;
-	if (row > -1)
-	{ 
-		[self performSegueWithIdentifier:@"showElementInspectorSegue" sender:self];
-	}
-
+	self.inspectorVC.representedObject = ((ElementTreeNode *)(selection.firstObject)).representedObject;
 }
 
 //------------------------------------------------------------------------------

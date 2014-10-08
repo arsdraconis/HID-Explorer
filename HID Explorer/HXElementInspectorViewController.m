@@ -8,6 +8,30 @@
 
 #import "HXElementInspectorViewController.h"
 
+#import "HXDeviceViewController.h"
+
+static const NSString *HXSelectedElementKey = @"HXSelectedElementKey";
+
+
+
+@interface HXElementInspectorViewController ()
+
+@property (weak) HXDeviceViewController *deviceVC;
+@property BOOL isCurrentlyObserving;
+
+@end
+
+
+
 @implementation HXElementInspectorViewController
+
+- (void)setRepresentedObject:(id)representedObject
+{
+	[super setRepresentedObject:representedObject];
+	NSLog(@"Inspecting %@", representedObject);
+	// TODO: set represented object here.
+}
+
+
 
 @end

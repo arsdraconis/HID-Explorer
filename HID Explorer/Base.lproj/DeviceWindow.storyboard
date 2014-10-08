@@ -193,11 +193,6 @@
                                                 <action selector="upateSelection:" target="obC-1z-Qna" id="YPV-7y-PDP"/>
                                                 <binding destination="9FY-eH-tx3" name="content" keyPath="arrangedObjects" id="2Xe-mq-m44"/>
                                                 <binding destination="9FY-eH-tx3" name="selectionIndexPaths" keyPath="selectionIndexPaths" previousBinding="2Xe-mq-m44" id="fjq-gb-hi3"/>
-                                                <binding destination="obC-1z-Qna" name="doubleClickTarget" keyPath="self" id="W5y-Gy-3ah">
-                                                    <dictionary key="options">
-                                                        <string key="NSSelectorName">didDoubleClickOutlineView</string>
-                                                    </dictionary>
-                                                </binding>
                                             </connections>
                                         </outlineView>
                                     </subviews>
@@ -322,7 +317,7 @@
                 <splitViewController id="dFm-hr-VHq" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="hWK-Pz-39S"/>
-                        <splitViewItem collapsed="YES" holdingPriority="251" id="pDe-FH-Bgf"/>
+                        <splitViewItem canCollapse="YES" holdingPriority="251" id="pDe-FH-Bgf"/>
                     </splitViewItems>
                     <splitView key="splitView" id="Zdj-Ia-EAv">
                         <rect key="frame" x="-5" y="0.0" width="480" height="551"/>
@@ -372,7 +367,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="eY7-uK-Tg5">
-                                                            <rect key="frame" x="1" y="1" width="161.5" height="17"/>
+                                                            <rect key="frame" x="1" y="1" width="161" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-A0-8iX">
@@ -409,7 +404,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="QKH-zc-eaK">
-                                                            <rect key="frame" x="165.5" y="1" width="310.5" height="17"/>
+                                                            <rect key="frame" x="165.5" y="1" width="310" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5MG-Nn-wKa">

@@ -40,6 +40,9 @@
 	[self buildElementTree:device];
 }
 
+//------------------------------------------------------------------------------
+#pragma mark UI Functionality
+//------------------------------------------------------------------------------
 - (IBAction)setShouldLiveUpdate:(id)sender
 {
 	NSButton *checkBox = (NSButton *)sender;
@@ -51,6 +54,18 @@
 	{
 		NSLog(@"Will not allow live updating.");
 	}
+}
+
+- (void)didDoubleClickOutlineView
+{
+	NSInteger row = self.elementsOutlineView.selectedRow;
+	
+	if (row > -1)
+	{
+//		HIDElement *selectedElement = self.elementsTreeController.arrangedObjects[row];
+		[self performSegueWithIdentifier:@"showElementInspectorSegue" sender:self];
+	}
+
 }
 
 //------------------------------------------------------------------------------

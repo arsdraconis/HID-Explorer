@@ -146,7 +146,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="50" minWidth="50" maxWidth="150" id="2f3-T7-KEZ">
+                                                <tableColumn width="79" minWidth="50" maxWidth="150" id="2f3-T7-KEZ">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Cookie">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -191,6 +191,11 @@
                                             </tableColumns>
                                             <connections>
                                                 <binding destination="9FY-eH-tx3" name="content" keyPath="arrangedObjects" id="2Xe-mq-m44"/>
+                                                <binding destination="obC-1z-Qna" name="doubleClickTarget" keyPath="self" id="W5y-Gy-3ah">
+                                                    <dictionary key="options">
+                                                        <string key="NSSelectorName">didDoubleClickOutlineView</string>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </outlineView>
                                     </subviews>
@@ -218,13 +223,6 @@
                                 <connections>
                                     <action selector="setShouldLiveUpdate:" target="obC-1z-Qna" id="L48-Wu-DhD"/>
                                 </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Nj-nW-ZbS">
-                                <rect key="frame" x="336" y="13" width="130" height="32"/>
-                                <buttonCell key="cell" type="push" title="Send Report..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5xL-MN-3gS">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="osM-Ku-VG5">
                                 <rect key="frame" x="18" y="387" width="114" height="17"/>
@@ -261,27 +259,46 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LzH-c5-GKg">
+                                <rect key="frame" x="326" y="13" width="140" height="32"/>
+                                <buttonCell key="cell" type="push" title="Inspect Element" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qfb-XN-lB2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="RpY-zV-qlp" kind="show" identifier="showElementInspectorSegue" id="gVQ-tb-SXC"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Nj-nW-ZbS">
+                                <rect key="frame" x="196" y="13" width="130" height="32"/>
+                                <buttonCell key="cell" type="push" title="Send Report..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5xL-MN-3gS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="lcJ-UY-s9a" firstAttribute="trailing" secondItem="caw-tC-hwD" secondAttribute="trailing" id="3eV-27-KZz"/>
                             <constraint firstItem="a4w-eI-QGb" firstAttribute="leading" secondItem="osM-Ku-VG5" secondAttribute="leading" id="4ns-oa-XwD"/>
-                            <constraint firstItem="0Nj-nW-ZbS" firstAttribute="trailing" secondItem="rT8-Vd-41w" secondAttribute="trailing" id="8ra-li-Ybw"/>
                             <constraint firstItem="a4w-eI-QGb" firstAttribute="baseline" secondItem="lcJ-UY-s9a" secondAttribute="baseline" id="9fZ-Jr-O8e"/>
                             <constraint firstItem="txr-xt-oax" firstAttribute="baseline" secondItem="Sh2-Io-9hE" secondAttribute="baseline" id="A2t-gO-IZx"/>
                             <constraint firstItem="rT8-Vd-41w" firstAttribute="top" secondItem="osM-Ku-VG5" secondAttribute="bottom" constant="8" symbolic="YES" id="F7r-OH-byy"/>
                             <constraint firstItem="txr-xt-oax" firstAttribute="leading" secondItem="caw-tC-hwD" secondAttribute="leading" id="GGs-sx-UaF"/>
                             <constraint firstItem="Sh2-Io-9hE" firstAttribute="leading" secondItem="MWs-sE-QL5" secondAttribute="leading" id="KCr-fn-ZQs"/>
+                            <constraint firstItem="0Nj-nW-ZbS" firstAttribute="top" secondItem="rT8-Vd-41w" secondAttribute="bottom" constant="20" symbolic="YES" id="ORH-vp-ozr"/>
                             <constraint firstItem="osM-Ku-VG5" firstAttribute="leading" secondItem="rT8-Vd-41w" secondAttribute="leading" id="QCj-fR-h8N"/>
                             <constraint firstItem="MWs-sE-QL5" firstAttribute="leading" secondItem="a4w-eI-QGb" secondAttribute="leading" id="Reo-hD-IN3"/>
+                            <constraint firstItem="0Nj-nW-ZbS" firstAttribute="baseline" secondItem="LzH-c5-GKg" secondAttribute="baseline" id="Rju-Ay-Ift"/>
                             <constraint firstItem="lcJ-UY-s9a" firstAttribute="trailing" secondItem="rT8-Vd-41w" secondAttribute="trailing" id="SCE-PT-YMg"/>
                             <constraint firstItem="txr-xt-oax" firstAttribute="leading" secondItem="Sh2-Io-9hE" secondAttribute="trailing" constant="8" symbolic="YES" id="SKz-2O-7v0"/>
+                            <constraint firstItem="LzH-c5-GKg" firstAttribute="trailing" secondItem="rT8-Vd-41w" secondAttribute="trailing" id="SbK-dI-JDf"/>
                             <constraint firstItem="caw-tC-hwD" firstAttribute="leading" secondItem="MWs-sE-QL5" secondAttribute="trailing" constant="8" symbolic="YES" id="Ues-Tr-e6P"/>
                             <constraint firstItem="Sh2-Io-9hE" firstAttribute="top" secondItem="0m9-Gg-mh8" secondAttribute="top" constant="20" symbolic="YES" id="Wtu-iI-hqZ"/>
                             <constraint firstItem="a4w-eI-QGb" firstAttribute="top" secondItem="MWs-sE-QL5" secondAttribute="bottom" constant="8" symbolic="YES" id="XVy-5e-IgZ"/>
+                            <constraint firstAttribute="bottom" secondItem="0Nj-nW-ZbS" secondAttribute="bottom" constant="20" symbolic="YES" id="avy-r8-fhh"/>
                             <constraint firstItem="caw-tC-hwD" firstAttribute="leading" secondItem="lcJ-UY-s9a" secondAttribute="leading" id="cSu-43-fbO"/>
-                            <constraint firstItem="0Nj-nW-ZbS" firstAttribute="top" secondItem="rT8-Vd-41w" secondAttribute="bottom" constant="20" symbolic="YES" id="fo4-PR-adV"/>
+                            <constraint firstItem="LzH-c5-GKg" firstAttribute="leading" secondItem="0Nj-nW-ZbS" secondAttribute="trailing" constant="12" symbolic="YES" id="ehk-15-iO4"/>
                             <constraint firstItem="h6k-Qh-W6Z" firstAttribute="top" secondItem="rT8-Vd-41w" secondAttribute="bottom" constant="8" symbolic="YES" id="hLQ-Sc-vKZ"/>
-                            <constraint firstAttribute="bottom" secondItem="0Nj-nW-ZbS" secondAttribute="bottom" constant="20" symbolic="YES" id="jqb-y8-Uyt"/>
                             <constraint firstItem="txr-xt-oax" firstAttribute="trailing" secondItem="caw-tC-hwD" secondAttribute="trailing" id="mpa-Op-f1X"/>
                             <constraint firstItem="lcJ-UY-s9a" firstAttribute="leading" secondItem="a4w-eI-QGb" secondAttribute="trailing" constant="8" symbolic="YES" id="npi-2X-SjR"/>
                             <constraint firstAttribute="trailing" secondItem="txr-xt-oax" secondAttribute="trailing" constant="20" symbolic="YES" id="pIJ-na-aeS"/>
@@ -308,6 +325,38 @@
                 </treeController>
             </objects>
             <point key="canvasLocation" x="365" y="377"/>
+        </scene>
+        <!--Element Inspector Window Controller-->
+        <scene sceneID="3ER-4H-sL1">
+            <objects>
+                <windowController id="RpY-zV-qlp" userLabel="Element Inspector Window Controller" sceneMemberID="viewController">
+                    <window key="window" title="Element Inspector" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="utilityWindow" id="AjR-fp-cjL" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" ignoresCycle="YES" fullScreenAuxiliary="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="357" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="fm3-Le-pxA" kind="relationship" relationship="window.shadowedContentViewController" id="MqW-8G-9W7"/>
+                    </connections>
+                </windowController>
+                <customObject id="YRY-g4-9fa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="-208"/>
+        </scene>
+        <!--Element Inspector View Controller-->
+        <scene sceneID="UwG-Ub-amG">
+            <objects>
+                <viewController id="fm3-Le-pxA" userLabel="Element Inspector View Controller" sceneMemberID="viewController">
+                    <view key="view" id="bfF-cZ-37G">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="6uy-b9-vNR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="245"/>
         </scene>
     </scenes>
 </document>

@@ -8,12 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class HIDElement, ElementTreeNode;
-
 @interface HXDeviceViewController : NSViewController
-
-@property IBOutlet NSOutlineView *elementsOutlineView;
-@property IBOutlet NSTreeController *elementsTreeController;
-@property ElementTreeNode *rootNode;
 
 @end

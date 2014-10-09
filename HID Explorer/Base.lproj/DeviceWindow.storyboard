@@ -232,18 +232,17 @@
                                                             <rect key="frame" x="1" y="1" width="50" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-by-5fu">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="inW-Zg-isu">
+                                                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBT-MD-iio">
+                                                                    <rect key="frame" x="-6" y="-1" width="61" height="18"/>
+                                                                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="only" inset="2" id="Cgn-7z-nwa">
+                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                         <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <binding destination="fHe-fv-hpq" name="value" keyPath="objectValue.isPrimary" id="TNL-96-mzL"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
-                                                            <connections>
-                                                                <outlet property="textField" destination="Nxc-by-5fu" id="3AV-4e-HLA"/>
-                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -266,11 +265,15 @@
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZS-3L-yGb">
                                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="dgI-TD-QNb">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="dgI-TD-QNb">
+                                                                        <customFormatter key="formatter" id="2gR-qr-gHW" customClass="adHexFormatter"/>
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="q00-x8-d8v" name="value" keyPath="objectValue.usage" id="BaB-cB-cCm"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -298,11 +301,15 @@
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V47-Xd-tO5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="bRu-ZA-SLL">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="bRu-ZA-SLL">
+                                                                        <customFormatter key="formatter" id="pFT-eS-Bmt" customClass="adHexFormatter"/>
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="Jt9-nd-Rr7" name="value" keyPath="objectValue.usagePage" id="2AK-sT-dS2"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -577,6 +584,9 @@
                             <constraint firstItem="Hbc-0S-GOS" firstAttribute="baseline" secondItem="QQb-gh-LXX" secondAttribute="baseline" id="za0-K0-TEZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usagePairsArrayController" destination="3OS-aT-Dl5" id="cfI-gT-i8r"/>
+                    </connections>
                 </viewController>
                 <customObject id="oRP-LY-atM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController editable="NO" avoidsEmptySelection="NO" id="3OS-aT-Dl5" userLabel="Usage Pairs Array Controller">

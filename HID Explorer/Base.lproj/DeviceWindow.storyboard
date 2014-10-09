@@ -591,7 +591,7 @@
                 <customObject id="oRP-LY-atM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController editable="NO" avoidsEmptySelection="NO" id="3OS-aT-Dl5" userLabel="Usage Pairs Array Controller">
                     <connections>
-                        <binding destination="obC-1z-Qna" name="contentArray" keyPath="usagePairs" id="tcB-LL-fEy"/>
+                        <binding destination="obC-1z-Qna" name="contentArray" keyPath="self.usagePairs" id="vXM-hr-7he"/>
                     </connections>
                 </arrayController>
             </objects>

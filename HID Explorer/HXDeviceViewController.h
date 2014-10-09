@@ -10,6 +10,7 @@
 
 @interface HXDeviceViewController : NSViewController
 
+@property IBOutlet NSArrayController *usagePairsArrayController;
 @property NSMutableArray *usagePairs;
 
 @end

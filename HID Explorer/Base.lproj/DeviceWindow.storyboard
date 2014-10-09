@@ -325,11 +325,11 @@
                                     </subviews>
                                     <nil key="backgroundColor"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="YES" id="dHf-Hq-TQa">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="dHf-Hq-TQa">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="a3B-Rv-rDB">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="a3B-Rv-rDB">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -878,6 +878,9 @@
                                     <real value="250"/>
                                     <real value="250"/>
                                 </holdingPriorities>
+                                <connections>
+                                    <outlet property="delegate" destination="fm3-Le-pxA" id="mM7-p4-ppO"/>
+                                </connections>
                             </splitView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="MOZ-aF-UFR">
                                 <rect key="frame" x="18" y="31" width="94" height="18"/>
@@ -908,6 +911,11 @@
                             <constraint firstAttribute="bottom" secondItem="9gh-bW-ISc" secondAttribute="bottom" constant="55" id="pkX-uW-JaO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="elementsOutlineView" destination="Bcm-Fb-zfJ" id="UNp-nH-D89"/>
+                        <outlet property="elementsTreeController" destination="9FY-eH-tx3" id="fO1-Ao-6LX"/>
+                        <outlet property="propertiesTableView" destination="nXU-8k-bE4" id="sU1-gB-dzH"/>
+                    </connections>
                 </viewController>
                 <customObject id="6uy-b9-vNR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <treeController objectClassName="ElementTreeNode" editable="NO" childrenKeyPath="childNodes" leafKeyPath="isLeaf" avoidsEmptySelection="NO" id="9FY-eH-tx3" userLabel="Device Elements Tree Controller">

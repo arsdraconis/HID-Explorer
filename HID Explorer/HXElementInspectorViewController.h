@@ -10,7 +10,7 @@
 
 @class ElementTreeNode;
 
-@interface HXElementInspectorViewController : NSViewController
+@interface HXElementInspectorViewController : NSViewController <NSSplitViewDelegate>
 
 @property IBOutlet NSOutlineView *elementsOutlineView;
 @property IBOutlet NSTreeController *elementsTreeController;

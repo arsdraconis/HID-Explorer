@@ -8,6 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class ElementTreeNode;
+
 @interface HXElementInspectorViewController : NSViewController
+
+@property IBOutlet NSOutlineView *elementsOutlineView;
+@property IBOutlet NSTreeController *elementsTreeController;
+@property ElementTreeNode *rootNode;
+
+@property IBOutlet NSTableView *propertiesTableView;
 
 @end

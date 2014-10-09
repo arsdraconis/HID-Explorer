@@ -8,8 +8,8 @@
 
 #import "HXElementInspectorViewController.h"
 
-#import "HXDeviceViewController.h"
-
+#import "ElementTreeNode.h"
+#import <HIDKit/HIDKit.h>
 
 //------------------------------------------------------------------------------
 #pragma mark Private Class Extension
@@ -25,13 +25,55 @@
 //------------------------------------------------------------------------------
 @implementation HXElementInspectorViewController
 
-- (void)setRepresentedObject:(id)representedObject
+//------------------------------------------------------------------------------
+#pragma mark View Lifecycle
+//------------------------------------------------------------------------------
+- (void)viewWillAppear
 {
-	[super setRepresentedObject:representedObject];
-	NSLog(@"Inspecting %@", representedObject);
-	// TODO: set represented object here.
+	HIDDevice *device = (HIDDevice *)(self.parentViewController.representedObject);
+	self.representedObject = device;
+	
+	[self buildElementTree:device];
 }
 
+
+//------------------------------------------------------------------------------
+#pragma mark Building the Element Tree
+//------------------------------------------------------------------------------
+- (void)buildElementTree:(HIDDevice *)device
+{
+	ElementTreeNode *temp = [ElementTreeNode treeNodeWithRepresentedObject:nil];
+	
+	for (HIDElement *element in device.elements)
+	{
+		ElementTreeNode *node = [self builtTreeBranch:element];
+		[temp.mutableChildNodes addObject:node];
+	}
+	
+	self.rootNode = temp;
+}
+
+- (ElementTreeNode *)builtTreeBranch:(HIDElement *)element
+{
+	ElementTreeNode *node = [ElementTreeNode treeNodeWithRepresentedObject:element];
+	
+	NSArray *children = element.children;
+	if (children.count != 0)
+	{
+		for (HIDElement *child in children)
+		{
+			ElementTreeNode *branch = [self builtTreeBranch:child];
+			[node.mutableChildNodes addObject:branch];
+		}
+	}
+	
+	return node;
+}
+
+
+//------------------------------------------------------------------------------
+#pragma mark UI Actions
+//------------------------------------------------------------------------------
 - (IBAction)setLiveUpdate:(id)sender
 {
 	NSButton *checkBox = (NSButton *)sender;

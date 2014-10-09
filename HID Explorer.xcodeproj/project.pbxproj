@@ -18,6 +18,7 @@
 		1671453619C041F4008881D3 /* HID_ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671453519C041F4008881D3 /* HID_ExplorerTests.m */; };
 		1671454019C04206008881D3 /* HIDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; };
 		1671454219C0425A008881D3 /* HIDKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16CD259419E683BB00FEBC88 /* adHexFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CD259319E683BB00FEBC88 /* adHexFormatter.m */; };
 		16E17FCC19E527F3000827BC /* HXElementInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E17FCB19E527F3000827BC /* HXElementInspectorViewController.m */; };
 		16E9DA0C19C99E01005E193B /* HXDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */; };
 		16E9DA0F19C9A856005E193B /* DeviceWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E9DA0D19C9A856005E193B /* DeviceWindow.storyboard */; };
@@ -66,6 +67,8 @@
 		1671453419C041F4008881D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1671453519C041F4008881D3 /* HID_ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HID_ExplorerTests.m; sourceTree = "<group>"; };
 		1671453F19C04206008881D3 /* HIDKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDKit.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug/HIDKit.framework"; sourceTree = "<group>"; };
+		16CD259219E683BB00FEBC88 /* adHexFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adHexFormatter.h; sourceTree = "<group>"; };
+		16CD259319E683BB00FEBC88 /* adHexFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = adHexFormatter.m; sourceTree = "<group>"; };
 		16E17FCA19E527F3000827BC /* HXElementInspectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXElementInspectorViewController.h; sourceTree = "<group>"; };
 		16E17FCB19E527F3000827BC /* HXElementInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXElementInspectorViewController.m; sourceTree = "<group>"; };
 		16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDeviceViewController.h; sourceTree = "<group>"; };
@@ -127,8 +130,6 @@
 				16E9DA0D19C9A856005E193B /* DeviceWindow.storyboard */,
 				16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */,
 				16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */,
-				1625813E19E4014D000A0ADF /* ElementTreeNode.h */,
-				1625813F19E4014D000A0ADF /* ElementTreeNode.m */,
 				16E17FCA19E527F3000827BC /* HXElementInspectorViewController.h */,
 				16E17FCB19E527F3000827BC /* HXElementInspectorViewController.m */,
 			);
@@ -138,9 +139,13 @@
 		1671451C19C041F4008881D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1625813E19E4014D000A0ADF /* ElementTreeNode.h */,
+				1625813F19E4014D000A0ADF /* ElementTreeNode.m */,
 				1671453F19C04206008881D3 /* HIDKit.framework */,
 				1671451D19C041F4008881D3 /* Info.plist */,
 				1671451E19C041F4008881D3 /* main.m */,
+				16CD259219E683BB00FEBC88 /* adHexFormatter.h */,
+				16CD259319E683BB00FEBC88 /* adHexFormatter.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				16E17FCC19E527F3000827BC /* HXElementInspectorViewController.m in Sources */,
 				166C341219CAF7D0000C3A0B /* HXDevicesWindowController.m in Sources */,
 				1612F73A19C0733D000122E9 /* HXDevicesViewController.m in Sources */,
+				16CD259419E683BB00FEBC88 /* adHexFormatter.m in Sources */,
 				166C340F19CAC69B000C3A0B /* HXWindowManager.m in Sources */,
 				16E9DA0C19C99E01005E193B /* HXDeviceViewController.m in Sources */,
 				1671452519C041F4008881D3 /* AppDelegate.m in Sources */,

@@ -28,17 +28,6 @@
 //------------------------------------------------------------------------------
 @implementation HXDeviceViewController
 
-- (void)viewWillAppear
-{
-	// Set the represented object.
-	[self setRepresentedObject:self.parentViewController.representedObject];
-	
-	// Keep a reference to our inspector view controller.
-	NSMutableArray *splitViewItems = [[((NSSplitViewController *)(self.parentViewController)) childViewControllers] mutableCopy];
-	[splitViewItems removeObject:self];
-	self.inspectorVC = splitViewItems.lastObject;
-}
-
 - (void)setRepresentedObject:(id)representedObject
 {
 	[super setRepresentedObject:representedObject];
@@ -60,8 +49,11 @@
 
 - (IBAction)upateSelection:(id)sender
 {
-	NSArray *selection = self.elementsTreeController.selectedObjects;
-	self.inspectorVC.representedObject = ((ElementTreeNode *)(selection.firstObject)).representedObject;
+	if (self.inspectorVC)
+	{
+		NSArray *selection = self.elementsTreeController.selectedObjects;
+		self.inspectorVC.representedObject = ((ElementTreeNode *)(selection.firstObject)).representedObject;
+	}
 }
 
 
@@ -102,6 +94,17 @@
 //------------------------------------------------------------------------------
 #pragma mark View Lifecycle
 //------------------------------------------------------------------------------
+- (void)viewWillAppear
+{
+	// Set the represented object.
+	[self setRepresentedObject:self.parentViewController.representedObject];
+	
+	// Keep a reference to our inspector view controller.
+	NSMutableArray *splitViewItems = [[((NSSplitViewController *)(self.parentViewController)) childViewControllers] mutableCopy];
+	[splitViewItems removeObject:self];
+	self.inspectorVC = splitViewItems.lastObject;
+}
+
 - (void)viewDidAppear
 {
 	HIDDevice *device = self.representedObject;

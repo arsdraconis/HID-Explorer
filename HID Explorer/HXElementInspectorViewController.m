@@ -10,19 +10,19 @@
 
 #import "HXDeviceViewController.h"
 
-static const NSString *HXSelectedElementKey = @"HXSelectedElementKey";
 
-
-
+//------------------------------------------------------------------------------
+#pragma mark Private Class Extension
+//------------------------------------------------------------------------------
 @interface HXElementInspectorViewController ()
 
-@property (weak) HXDeviceViewController *deviceVC;
-@property BOOL isCurrentlyObserving;
 
 @end
 
 
-
+//------------------------------------------------------------------------------
+#pragma mark Implementation
+//------------------------------------------------------------------------------
 @implementation HXElementInspectorViewController
 
 - (void)setRepresentedObject:(id)representedObject

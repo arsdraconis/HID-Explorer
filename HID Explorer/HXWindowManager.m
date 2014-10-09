@@ -37,6 +37,10 @@
 	return self;
 }
 
+
+//------------------------------------------------------------------------------
+#pragma mark Getting the Window for a Device
+//------------------------------------------------------------------------------
 - (void)windowForDevice:(HIDDevice *)device
 {
 	NSWindowController *wc;
@@ -57,15 +61,21 @@
 	{
 		NSStoryboard *sb = [NSStoryboard storyboardWithName:@"DeviceWindow" bundle:nil];
 		wc = [sb instantiateInitialController];
+		
 		[_windowControllers addObject:wc];
-		wc.window.contentViewController.representedObject = device;
 		[self cascadeWindow:wc.window];
 		wc.window.delegate = self;
+		
+		wc.window.contentViewController.representedObject = device;
 	}
 	
 	[wc showWindow:nil];
 }
 
+
+//------------------------------------------------------------------------------
+#pragma mark Cascading Device Windows
+//------------------------------------------------------------------------------
 - (void)cascadeWindow:(NSWindow *)window
 {
 	if (self.cascadePoint.x == 0 && self.cascadePoint.y == 0)
@@ -76,6 +86,10 @@
 	self.cascadePoint = [window cascadeTopLeftFromPoint:self.cascadePoint];
 }
 
+
+//------------------------------------------------------------------------------
+#pragma mark Window Delegate Methods
+//------------------------------------------------------------------------------
 - (void)windowWillClose:(NSNotification *)notification
 {
 	@autoreleasepool

@@ -12,14 +12,8 @@
 
 @interface HXDeviceViewController : NSViewController
 
-@property IBOutlet NSTextField *nameLabel;
-@property IBOutlet NSTextField *manufacturerLabel;
-@property IBOutlet NSTextField *transportLabel;
-
 @property IBOutlet NSOutlineView *elementsOutlineView;
 @property IBOutlet NSTreeController *elementsTreeController;
-@property IBOutlet ElementTreeNode *rootNode;
-
-@property IBOutlet HIDElement *selectedElement;
+@property ElementTreeNode *rootNode;
 
 @end

@@ -47,6 +47,8 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 		NSNumber *usage = newPair[HIDDeviceUsagePairsUsageKey];
 		NSNumber *usagePage = newPair[HIDDeviceUsagePairsUsagePageKey];
 		
+		// TODO: Present human readable names for the usage pairs.
+		
 		if (usage.unsignedIntegerValue	   == device.primaryUsage &&
 			usagePage.unsignedIntegerValue == device.primaryUsagePage)
 		{
@@ -56,9 +58,10 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 		{
 			newPair[@"isPrimary"] = [NSNumber numberWithBool:NO];
 		}
+		
+		[self.usagePairsArrayController addObject:newPair];
 	}
 	
-	[self.usagePairsArrayController setContent:self.usagePairs];
 }
 
 

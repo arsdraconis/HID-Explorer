@@ -8,7 +8,7 @@
 
 #import "HXWindowManager.h"
 
-@class HIDDevice;
+#import <HIDKit/HIDKit.h>
 
 //------------------------------------------------------------------------------
 #pragma mark Class Extension
@@ -66,7 +66,9 @@
 		[self cascadeWindow:wc.window];
 		wc.window.delegate = self;
 		
+		wc.window.title = [NSString stringWithFormat:@"%@ (%@)", device.product, device.transport];
 		wc.window.contentViewController.representedObject = device;
+		[device open];
 	}
 	
 	[wc showWindow:nil];
@@ -98,6 +100,8 @@
 		{
 			if (wc.window == notification.object)
 			{
+				HIDDevice *device = (HIDDevice *)(wc.window.contentViewController.representedObject);
+				[device close];
 				[_windowControllers removeObject:wc];
 				break;
 			}

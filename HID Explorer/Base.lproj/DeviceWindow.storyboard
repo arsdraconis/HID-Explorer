@@ -206,14 +206,14 @@
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlL-Vj-B0k">
                                 <rect key="frame" x="20" y="22" width="559" height="132"/>
-                                <clipView key="contentView" misplaced="YES" id="Han-1H-FRF">
+                                <clipView key="contentView" misplaced="YES" drawsBackground="NO" id="Han-1H-FRF">
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="fyU-av-7qF" viewBased="YES" id="PtS-MW-020">
+                                        <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="fyU-av-7qF" viewBased="YES" id="PtS-MW-020">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn editable="NO" width="50" minWidth="50" maxWidth="50" id="QoK-H0-FDd">
@@ -232,16 +232,17 @@
                                                             <rect key="frame" x="1" y="1" width="50" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBT-MD-iio">
-                                                                    <rect key="frame" x="-6" y="-1" width="61" height="18"/>
-                                                                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="only" inset="2" id="Cgn-7z-nwa">
-                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                        <font key="font" metaFont="system"/>
-                                                                    </buttonCell>
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-Lb-Tmo">
+                                                                    <rect key="frame" x="1" y="-16" width="48" height="48"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="iYH-ap-Dgl"/>
                                                                     <connections>
-                                                                        <binding destination="fHe-fv-hpq" name="value" keyPath="objectValue.isPrimary" id="TNL-96-mzL"/>
+                                                                        <binding destination="fHe-fv-hpq" name="hidden" keyPath="objectValue.isPrimary" id="HgC-yo-T8I">
+                                                                            <dictionary key="options">
+                                                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
-                                                                </button>
+                                                                </imageView>
                                                             </subviews>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -322,13 +323,13 @@
                                             </connections>
                                         </tableView>
                                     </subviews>
-                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <nil key="backgroundColor"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="dHf-Hq-TQa">
+                                <scroller key="horizontalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="YES" id="dHf-Hq-TQa">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="a3B-Rv-rDB">
+                                <scroller key="verticalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="a3B-Rv-rDB">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -918,4 +919,7 @@
             <point key="canvasLocation" x="1130.5" y="684.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSMenuOnStateTemplate" width="12" height="12"/>
+    </resources>
 </document>

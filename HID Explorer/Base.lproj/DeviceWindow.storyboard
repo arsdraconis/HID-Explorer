@@ -272,7 +272,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="q00-x8-d8v" name="value" keyPath="objectValue.usage" id="BaB-cB-cCm"/>
+                                                                        <binding destination="q00-x8-d8v" name="value" keyPath="objectValue.DeviceUsage" id="N3F-qh-Bgl"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -282,7 +282,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="250" minWidth="50" maxWidth="250" id="j6k-rM-Bbl">
+                                                <tableColumn width="248" minWidth="50" maxWidth="250" id="j6k-rM-Bbl">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Usage Page">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -308,7 +308,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="Jt9-nd-Rr7" name="value" keyPath="objectValue.usagePage" id="2AK-sT-dS2"/>
+                                                                        <binding destination="Jt9-nd-Rr7" name="value" keyPath="objectValue.DeviceUsagePage" id="w08-Bn-iz3"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -323,7 +323,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="dHf-Hq-TQa">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="dHf-Hq-TQa">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -661,7 +661,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
-                                                        <tableColumn width="150" minWidth="100" maxWidth="200" id="un6-rI-XgK">
+                                                        <tableColumn width="198" minWidth="100" maxWidth="200" id="un6-rI-XgK">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Type">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>

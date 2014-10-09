@@ -17,7 +17,7 @@
 		return nil;
 	}
 	
-	return [NSString stringWithFormat:@"%#0lX", (long)[obj integerValue]];
+	return [NSString stringWithFormat:@"0x%0lX", (long)[obj integerValue]];
 }
 
 - (BOOL)getObjectValue:(out __autoreleasing id *)obj

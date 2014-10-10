@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>UsagePages</key>
+	<dict>
+		<key>0x0000</key>
+		<string>Undefined</string>
+		<key>0x0001</key>
+		<string>Generic Desktop</string>
+		<key>0x0002</key>
+		<string>Simulation Controls</string>
+		<key>0x0003</key>
+		<string>VR Controls</string>
+		<key>0x0004</key>
+		<string>Sports Controls</string>
+		<key>0x0005</key>
+		<string>Game Controls</string>
+		<key>0x0006</key>
+		<string>Generic Device Controls</string>
+		<key>0x0007</key>
+		<string>Keyboard</string>
+		<key>0x0008</key>
+		<string>LEDs</string>
+		<key>0x0009</key>
+		<string>Button</string>
+		<key>0x000A</key>
+		<string>Ordinal</string>
+		<key>0x000B</key>
+		<string>Telephony</string>
+		<key>0x000C</key>
+		<string>Consumer</string>
+		<key>0x000D</key>
+		<string>Digitizer</string>
+		<key>0x000F</key>
+		<string>Physical Interface Device</string>
+		<key>0x0010</key>
+		<string>Unicode</string>
+		<key>0x0014</key>
+		<string>Alphanumeric Display</string>
+		<key>0x0040</key>
+		<string>Medical Instruments</string>
+		<key>0x0080</key>
+		<string>Monitor</string>
+		<key>0x0081</key>
+		<string>Monitor Enumerated Values</string>
+		<key>0x0082</key>
+		<string>VESA Virtual Controls</string>
+		<key>0x0083</key>
+		<string>VESA Command</string>
+		<key>0x0084</key>
+		<string>Power Device</string>
+		<key>0x0085</key>
+		<string>Battery System</string>
+		<key>0x0086</key>
+		<string>Power Device</string>
+		<key>0x0087</key>
+		<string>Power Device</string>
+		<key>0x008C</key>
+		<string>Bar Code Scanner</string>
+		<key>0x008D</key>
+		<string>Scale</string>
+		<key>0x008E</key>
+		<string>Magnetic Stripe Reader</string>
+		<key>0x008F</key>
+		<string>Point of Sale (POS) Device (Reserved)</string>
+		<key>0x0090</key>
+		<string>Camera Control</string>
+		<key>0x0091</key>
+		<string>Arcade</string>
+		<key>ReservedRangeString</key>
+		<string>Reserved</string>
+		<key>VendorDefinedRangeString</key>
+		<string>Vendor Defined</string>
+	</dict>
+</dict>
 </plist>

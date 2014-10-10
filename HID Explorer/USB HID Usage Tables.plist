@@ -283,6 +283,25 @@
 		<key>21</key>
 		<string>Display Enable</string>
 	</dict>
+	<key>0x06</key>
+	<dict>
+		<key>00</key>
+		<string>Undefined</string>
+		<key>20</key>
+		<string>Battery Strength</string>
+		<key>21</key>
+		<string>Wireless Channel</string>
+		<key>22</key>
+		<string>Wireless ID</string>
+		<key>23</key>
+		<string>Discover Wireless Control</string>
+		<key>24</key>
+		<string>Security Code Character Entered</string>
+		<key>25</key>
+		<string>Security Code Character Erased</string>
+		<key>26</key>
+		<string>Security Code Cleared</string>
+	</dict>
 	<key>UsagePages</key>
 	<dict>
 		<key>0x00</key>

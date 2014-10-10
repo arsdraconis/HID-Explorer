@@ -2,71 +2,216 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>0x01</key>
+	<dict>
+		<key>00</key>
+		<string>Undefined</string>
+		<key>01</key>
+		<string>Pointer</string>
+		<key>02</key>
+		<string>Mouse</string>
+		<key>03</key>
+		<string>Reserved</string>
+		<key>04</key>
+		<string>Joystick</string>
+		<key>05</key>
+		<string>Game Pad</string>
+		<key>06</key>
+		<string>Keyboard</string>
+		<key>07</key>
+		<string>Keypad</string>
+		<key>08</key>
+		<string>Multi-Axis Controller</string>
+		<key>09</key>
+		<string>Tablet PC System Controls</string>
+		<key>30</key>
+		<string>X</string>
+		<key>31</key>
+		<string>Y</string>
+		<key>32</key>
+		<string>Z</string>
+		<key>33</key>
+		<string>Rx</string>
+		<key>34</key>
+		<string>Ry</string>
+		<key>35</key>
+		<string>Rz</string>
+		<key>36</key>
+		<string>Slider</string>
+		<key>37</key>
+		<string>Dial</string>
+		<key>38</key>
+		<string>Wheel</string>
+		<key>39</key>
+		<string>Hat Switch</string>
+		<key>3A</key>
+		<string>Counted Buffer</string>
+		<key>3B</key>
+		<string>Byte Count</string>
+		<key>3C</key>
+		<string>Motion Wakeup</string>
+		<key>3D</key>
+		<string>Start</string>
+		<key>3E</key>
+		<string>Select</string>
+		<key>40</key>
+		<string>Vx</string>
+		<key>41</key>
+		<string>Vy</string>
+		<key>42</key>
+		<string>Vz</string>
+		<key>43</key>
+		<string>Vbrx</string>
+		<key>44</key>
+		<string>Vbry</string>
+		<key>45</key>
+		<string>Vbrz</string>
+		<key>46</key>
+		<string>Vno</string>
+		<key>47</key>
+		<string>Feature Notification</string>
+		<key>48</key>
+		<string>Resolution Multiplier</string>
+		<key>80</key>
+		<string>System Control</string>
+		<key>81</key>
+		<string>System Power Down</string>
+		<key>82</key>
+		<string>System Sleep</string>
+		<key>83</key>
+		<string>System Wake Up</string>
+		<key>84</key>
+		<string>System Context Menu</string>
+		<key>85</key>
+		<string>System Main Menu</string>
+		<key>86</key>
+		<string>System App Menu</string>
+		<key>87</key>
+		<string>System Menu Help</string>
+		<key>88</key>
+		<string>System Menu Exit</string>
+		<key>89</key>
+		<string>System Menu Select</string>
+		<key>8A</key>
+		<string>System Menu Right</string>
+		<key>8B</key>
+		<string>System Menu Left</string>
+		<key>8C</key>
+		<string>System Menu Up</string>
+		<key>8D</key>
+		<string>System Menu Down</string>
+		<key>8E</key>
+		<string>System Cold Restart</string>
+		<key>8F</key>
+		<string>System Warm Restart</string>
+		<key>90</key>
+		<string>D-pad Up</string>
+		<key>91</key>
+		<string>D-pad Down</string>
+		<key>92</key>
+		<string>D-pad Right</string>
+		<key>93</key>
+		<string>D-pad Left</string>
+		<key>A0</key>
+		<string>System Dock</string>
+		<key>A1</key>
+		<string>System Undock</string>
+		<key>A2</key>
+		<string>System Setup</string>
+		<key>A3</key>
+		<string>System Break</string>
+		<key>A4</key>
+		<string>System Debugger Break</string>
+		<key>A5</key>
+		<string>Application Break</string>
+		<key>A6</key>
+		<string>Application Debugger Break</string>
+		<key>A7</key>
+		<string>System Speaker Mute</string>
+		<key>A8</key>
+		<string>System Hibernate</string>
+		<key>B0</key>
+		<string>System Display Invert</string>
+		<key>B1</key>
+		<string>System Display Internal</string>
+		<key>B2</key>
+		<string>System Display External</string>
+		<key>B3</key>
+		<string>System Display Both</string>
+		<key>B4</key>
+		<string>System Display Dual</string>
+		<key>B5</key>
+		<string>System Display Toggle Internal/External</string>
+		<key>B6</key>
+		<string>System Display Swap Primary/Secondary</string>
+		<key>B7</key>
+		<string>System Display LCD Autoscale</string>
+	</dict>
 	<key>UsagePages</key>
 	<dict>
-		<key>0x0000</key>
+		<key>0x00</key>
 		<string>Undefined</string>
-		<key>0x0001</key>
+		<key>0x01</key>
 		<string>Generic Desktop</string>
-		<key>0x0002</key>
+		<key>0x02</key>
 		<string>Simulation Controls</string>
-		<key>0x0003</key>
+		<key>0x03</key>
 		<string>VR Controls</string>
-		<key>0x0004</key>
+		<key>0x04</key>
 		<string>Sports Controls</string>
-		<key>0x0005</key>
+		<key>0x05</key>
 		<string>Game Controls</string>
-		<key>0x0006</key>
+		<key>0x06</key>
 		<string>Generic Device Controls</string>
-		<key>0x0007</key>
+		<key>0x07</key>
 		<string>Keyboard</string>
-		<key>0x0008</key>
+		<key>0x08</key>
 		<string>LEDs</string>
-		<key>0x0009</key>
+		<key>0x09</key>
 		<string>Button</string>
-		<key>0x000A</key>
+		<key>0x0A</key>
 		<string>Ordinal</string>
-		<key>0x000B</key>
+		<key>0x0B</key>
 		<string>Telephony</string>
-		<key>0x000C</key>
+		<key>0x0C</key>
 		<string>Consumer</string>
-		<key>0x000D</key>
+		<key>0x0D</key>
 		<string>Digitizer</string>
-		<key>0x000F</key>
+		<key>0x0F</key>
 		<string>Physical Interface Device</string>
-		<key>0x0010</key>
+		<key>0x10</key>
 		<string>Unicode</string>
-		<key>0x0014</key>
+		<key>0x14</key>
 		<string>Alphanumeric Display</string>
-		<key>0x0040</key>
+		<key>0x40</key>
 		<string>Medical Instruments</string>
-		<key>0x0080</key>
+		<key>0x80</key>
 		<string>Monitor</string>
-		<key>0x0081</key>
+		<key>0x81</key>
 		<string>Monitor Enumerated Values</string>
-		<key>0x0082</key>
+		<key>0x82</key>
 		<string>VESA Virtual Controls</string>
-		<key>0x0083</key>
+		<key>0x83</key>
 		<string>VESA Command</string>
-		<key>0x0084</key>
+		<key>0x84</key>
 		<string>Power Device</string>
-		<key>0x0085</key>
+		<key>0x85</key>
 		<string>Battery System</string>
-		<key>0x0086</key>
+		<key>0x86</key>
 		<string>Power Device</string>
-		<key>0x0087</key>
+		<key>0x87</key>
 		<string>Power Device</string>
-		<key>0x008C</key>
+		<key>0x8C</key>
 		<string>Bar Code Scanner</string>
-		<key>0x008D</key>
+		<key>0x8D</key>
 		<string>Scale</string>
-		<key>0x008E</key>
+		<key>0x8E</key>
 		<string>Magnetic Stripe Reader</string>
-		<key>0x008F</key>
+		<key>0x8F</key>
 		<string>Point of Sale (POS) Device (Reserved)</string>
-		<key>0x0090</key>
+		<key>0x90</key>
 		<string>Camera Control</string>
-		<key>0x0091</key>
+		<key>0x91</key>
 		<string>Arcade</string>
 		<key>ReservedRangeString</key>
 		<string>Reserved</string>

@@ -10,6 +10,7 @@
 #import <HIDKit/HIDKit.h>
 #import "ElementTreeNode.h"
 
+#import "HXUsageTableTranslator.h"
 #import "HXDeviceViewController.h"
 #import "HXElementInspectorViewController.h"
 
@@ -44,12 +45,15 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 	for (NSDictionary *pair in pairs)
 	{
 		NSMutableDictionary *newPair = [NSMutableDictionary dictionaryWithDictionary:pair];
-		NSNumber *usage = newPair[HIDDeviceUsagePairsUsageKey];
+		NSNumber *usageID = newPair[HIDDeviceUsagePairsUsageKey];
 		NSNumber *usagePage = newPair[HIDDeviceUsagePairsUsagePageKey];
 		
-		// TODO: Present human readable names for the usage pairs.
+		// Present human readable names for the usage pairs.
+		newPair[HIDDeviceUsagePairsUsagePageKey] = [HXUsageTableTranslator nameForUsagePage:usagePage.unsignedIntegerValue];
+		newPair[HIDDeviceUsagePairsUsageKey] = [HXUsageTableTranslator nameForUsagePage:usagePage.unsignedIntegerValue
+																				usageID:usagePage.unsignedIntegerValue];
 		
-		if (usage.unsignedIntegerValue	   == device.primaryUsage &&
+		if (usageID.unsignedIntegerValue   == device.primaryUsage &&
 			usagePage.unsignedIntegerValue == device.primaryUsagePage)
 		{
 			newPair[@"isPrimary"] = [NSNumber numberWithBool:YES];
@@ -78,3 +82,4 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 
 
 @end
+

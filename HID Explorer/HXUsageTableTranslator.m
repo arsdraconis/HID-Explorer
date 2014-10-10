@@ -81,12 +81,7 @@ static const NSString * HXUSBHIDUsageTablesPlistFilename = @"USB HID Usage Table
 		{
 			humanName = usagePagesList[@"VendorDefinedRangeString"];
 		}
-		else if (usagePage == 0x0E ||
-				 (usagePage >= 0x11 && usagePage <= 0x13) ||
-				 (usagePage >= 0x15 && usagePage <= 0x3F) ||
-				 (usagePage >= 0x41 && usagePage <= 0x7F) ||
-				 (usagePage >= 0x88 && usagePage <= 0x8B) ||
-				 (usagePage >= 0x92 && usagePage <= 0xFEFF))
+		else
 		{
 			humanName = usagePagesList[@"ReservedRangeString"];
 		}
@@ -115,8 +110,14 @@ static const NSString * HXUSBHIDUsageTablesPlistFilename = @"USB HID Usage Table
 			{
 				humanName = possibleValue;
 			}
+			else if ((possibleValue = usageIDList[@"*"]))
+			{
+				// Enumerated values. Format string is in XML file.
+				humanName = [NSString stringWithFormat:possibleValue, (unsigned long)usageID];
+			}
 			else
 			{
+				// Usage ID not found.
 				humanName = @"Reserved";
 			}
 		}

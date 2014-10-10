@@ -78,10 +78,12 @@ static const NSString * HXUSBHIDUsageTablesPlistFilename = @"USB HID Usage Table
 			if (usagePage == value)
 			{
 				humanName = usagePagesList[key];
+				break;
 			}
 			else if (usagePage >= 0xFF00 && usagePage <= 0xFFFF)
 			{
 				humanName = usagePagesList[@"VendorDefinedRangeString"];
+				break;
 			}
 			else if (usagePage == 0x0E ||
 					 (usagePage >= 0x11 && usagePage <= 0x13) ||
@@ -91,6 +93,7 @@ static const NSString * HXUSBHIDUsageTablesPlistFilename = @"USB HID Usage Table
 					 (usagePage >= 0x92 && usagePage <= 0xFEFF))
 			{
 				humanName = usagePagesList[@"ReservedRangeString"];
+				break;
 			}
 		}
 	}
@@ -106,28 +109,21 @@ static const NSString * HXUSBHIDUsageTablesPlistFilename = @"USB HID Usage Table
 	
 	if (usageTables)
 	{
-		NSDictionary *usagePagesList = usageTables[@"UsagePages"];
-		for (NSString *key in usagePagesList)
+		NSString *tableName = [NSString stringWithFormat:@"0x%02lX", usagePage];
+		NSDictionary *usageIDList = usageTables[tableName];
+		
+		if (usageIDList)
 		{
-			unsigned int value = 0;
-			[[NSScanner scannerWithString:key] scanHexInt:&value];
+			NSString *key = [NSString stringWithFormat:@"%02lX", (unsigned long)usageID];
+			NSString *possibleValue = usageIDList[key];
 			
-			if (usagePage == value)
+			if (possibleValue)
 			{
-				humanName = usagePagesList[key];
+				humanName = possibleValue;
 			}
-			else if (usagePage >= 0xFF00 && usagePage <= 0xFFFF)
+			else
 			{
-				humanName = usagePagesList[@"VendorDefinedRangeString"];
-			}
-			else if (usagePage == 0x0E ||
-					 (usagePage >= 0x11 && usagePage <= 0x13) ||
-					 (usagePage >= 0x15 && usagePage <= 0x3F) ||
-					 (usagePage >= 0x41 && usagePage <= 0x7F) ||
-					 (usagePage >= 0x88 && usagePage <= 0x8B) ||
-					 (usagePage >= 0x92 && usagePage <= 0xFEFF))
-			{
-				humanName = usagePagesList[@"ReservedRangeString"];
+				humanName = @"Reserved";
 			}
 		}
 	}

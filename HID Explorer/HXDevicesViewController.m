@@ -60,19 +60,18 @@
 
 - (IBAction)refreshDevices:(id)sender
 {
-	NSLog(@"Refreshing devices...");
 	[self.devicesArrayController setContent:[HIDManager devices]];
 }
 
 - (void)deviceDidConnect:(NSNotification *)note
 {
-	NSLog(@"Adding a device to table...");
+	NSLog(@"[HID Explorer] Device connected.");
 	[self.devicesArrayController addObject:note.object];
 }
 
 - (void)deviceDidDisconnect:(NSNotification *)note
 {
-	NSLog(@"Removing a device from the table...");
+	NSLog(@"[HID Explorer] Device disconnected.");
 	@autoreleasepool {
 		[self.devicesArrayController removeObject:note.object];
 	}

@@ -302,6 +302,25 @@
 		<key>26</key>
 		<string>Security Code Cleared</string>
 	</dict>
+	<key>0x09</key>
+	<dict>
+		<key>00</key>
+		<string>No Button Pressed</string>
+		<key>*</key>
+		<string>Button %ul</string>
+	</dict>
+	<key>0x0A</key>
+	<dict>
+		<key>00</key>
+		<string>Undefined</string>
+		<key>*</key>
+		<string>Instance %ul</string>
+	</dict>
+	<key>0x10</key>
+	<dict>
+		<key>*</key>
+		<string>Unicode Character u%04x</string>
+	</dict>
 	<key>UsagePages</key>
 	<dict>
 		<key>0x00</key>

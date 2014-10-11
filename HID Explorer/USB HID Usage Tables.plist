@@ -697,6 +697,69 @@
 		<key>*</key>
 		<string>Unicode Character \u%04x</string>
 	</dict>
+	<key>0x40</key>
+	<dict>
+		<key>00</key>
+		<string>Undefined</string>
+		<key>01</key>
+		<string>Medical Ultrasound</string>
+		<key>20</key>
+		<string>VCR/Acquisition</string>
+		<key>21</key>
+		<string>Freeze/Thaw</string>
+		<key>22</key>
+		<string>Clip Store</string>
+		<key>23</key>
+		<string>Update</string>
+		<key>24</key>
+		<string>Next</string>
+		<key>25</key>
+		<string>Save</string>
+		<key>26</key>
+		<string>Print</string>
+		<key>27</key>
+		<string>Microphone Enable</string>
+		<key>40</key>
+		<string>Cine</string>
+		<key>41</key>
+		<string>Transmit Power</string>
+		<key>42</key>
+		<string>Volume</string>
+		<key>43</key>
+		<string>Focus</string>
+		<key>44</key>
+		<string>Depth</string>
+		<key>60</key>
+		<string>Soft Step - Primary</string>
+		<key>61</key>
+		<string>Soft Step - Secondary</string>
+		<key>70</key>
+		<string>Depth Gain Compensation</string>
+		<key>80</key>
+		<string>Zoom Select</string>
+		<key>81</key>
+		<string>Zoom Adjust</string>
+		<key>82</key>
+		<string>Spectral Doppler Mode Select</string>
+		<key>83</key>
+		<string>Spectral Doppler Adjust</string>
+		<key>84</key>
+		<string>Color Doppler Mode Select</string>
+		<key>85</key>
+		<string>Color Doppler Adjust</string>
+		<key>86</key>
+		<string>Motion Mode Select</string>
+		<key>87</key>
+		<string>Motion Mode Adjust</string>
+		<key>88</key>
+		<string>2D Mode Select</string>
+		<key>89</key>
+		<string>2D Mode Select</string>
+		<key>A0</key>
+		<string>Soft Control Select</string>
+		<key>A1</key>
+		<string>Soft Control Adjust</string>
+	</dict>
 	<key>UsagePages</key>
 	<dict>
 		<key>0x00</key>

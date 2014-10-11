@@ -17,7 +17,8 @@
 		return nil;
 	}
 	
-	return [NSString stringWithFormat:@"0x%0lX", (long)[obj integerValue]];
+	// TODO: Fix me to always use groups of 2
+	return [NSString stringWithFormat:@"0x%04lX", (long)[obj integerValue]];
 }
 
 - (BOOL)getObjectValue:(out __autoreleasing id *)obj

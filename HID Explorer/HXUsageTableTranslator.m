@@ -113,6 +113,7 @@ static const NSString * HXUSBHIDUsageTablesPlistFilename = @"USB HID Usage Table
 			else if ((possibleValue = usageIDList[@"*"]))
 			{
 				// Enumerated values. Format string is in XML file.
+				// TODO: Fix Unicode page support.
 				humanName = [NSString stringWithFormat:possibleValue, (unsigned long)usageID];
 			}
 			else

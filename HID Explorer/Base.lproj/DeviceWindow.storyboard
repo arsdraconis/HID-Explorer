@@ -61,7 +61,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.product" id="NN1-25-NUU"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.product" id="rj3-ib-8jy">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown Product</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="caw-tC-hwD">
@@ -72,7 +76,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.manufacturer" id="9J3-qD-vJ2"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.manufacturer" id="OP0-Jt-LFG">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown Manufacturer</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lcJ-UY-s9a">
@@ -83,7 +91,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.transport" id="sfT-sq-eod"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.transport" id="daf-Us-Hmh">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a4w-eI-QGb">
@@ -362,7 +374,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.serialNumber" id="xX3-aZ-T8l"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.serialNumber" id="GF4-Jy-wwq">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qpw-dH-ZnV">
@@ -374,7 +390,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.countryCode" id="3V4-bh-yWp"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.countryCode" id="Qfm-5Z-XNJ">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uNQ-6U-2h6">
@@ -386,7 +406,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.productID" id="UHp-Yw-KtL"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.productID" id="1LH-5Y-1Rm">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-IG-C5R">
@@ -398,7 +422,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.vendorID" id="SzA-yg-b5O"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.vendorID" id="qFf-a5-UIs">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pb5-a6-0d3">
@@ -410,7 +438,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.vendorIDSource" id="8GX-js-ydc"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.vendorIDSource" id="DKj-AT-9Q3">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-gh-LXX">
@@ -422,7 +454,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.locationID" id="CyN-oc-bAj"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.locationID" id="3Jg-PZ-Ree">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Pb-O2-b0l">
@@ -437,7 +473,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxInputReportSize" id="nyp-4E-U1g"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxInputReportSize" id="g4s-nn-ERh">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ovO-oP-Z02">
@@ -449,7 +489,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxOutputReportSize" id="Wsl-aZ-mkS"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxOutputReportSize" id="sOr-7U-Sof">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ulM-py-ACe">
@@ -461,7 +505,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxFeatureReportSize" id="hvC-KN-0HC"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxFeatureReportSize" id="uca-xA-y9r">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Jr-I3-1RP">
@@ -472,7 +520,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxResponseLatency" id="45I-ai-env"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.maxResponseLatency" id="htb-ua-4nx">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BQk-kF-nWb">
@@ -483,7 +535,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.reportInterval" id="XQc-4l-0kx"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.reportInterval" id="WkN-Dv-rJK">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Way-B9-prE">
@@ -494,7 +550,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.sampleInterval" id="5wD-5j-iPe"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.sampleInterval" id="ECw-B7-Mdm">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wbc-U0-APX">
@@ -505,7 +565,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.requestTimeout" id="8hx-bo-J1t"/>
+                                    <binding destination="obC-1z-Qna" name="value" keyPath="representedObject.requestTimeout" id="e90-0U-b5w">
+                                        <dictionary key="options">
+                                            <string key="NSNullPlaceholder">Unknown</string>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E2C-y2-uzz">
@@ -677,7 +741,11 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="SYL-K2-vv4" name="value" keyPath="objectValue.name" id="LOZ-BJ-LmW"/>
+                                                                        <binding destination="SYL-K2-vv4" name="value" keyPath="objectValue.name" id="32t-6e-zcN">
+                                                                            <dictionary key="options">
+                                                                                <string key="NSNullPlaceholder">Unknown</string>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -717,7 +785,11 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="yOd-an-wb8" name="value" keyPath="objectValue.type" id="6Qm-J0-g9N"/>
+                                                                        <binding destination="yOd-an-wb8" name="value" keyPath="objectValue.type" id="VHU-kP-5Vp">
+                                                                            <dictionary key="options">
+                                                                                <string key="NSNullPlaceholder">Unknown</string>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -758,7 +830,11 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="cIy-t0-0oz" name="value" keyPath="objectValue.cookie" id="2BW-Wa-qHC"/>
+                                                                        <binding destination="cIy-t0-0oz" name="value" keyPath="objectValue.cookie" id="9P7-Rn-JmH">
+                                                                            <dictionary key="options">
+                                                                                <string key="NSNullPlaceholder">Unknown</string>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>

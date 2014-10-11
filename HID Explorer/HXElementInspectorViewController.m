@@ -10,6 +10,7 @@
 
 #import "ElementTreeNode.h"
 #import <HIDKit/HIDKit.h>
+#import "HXUsageTableTranslator.h"
 
 //------------------------------------------------------------------------------
 #pragma mark Private Class Extension
@@ -85,6 +86,21 @@
 	{
 		NSLog(@"Live updating off.");
 	}
+}
+
+
+//------------------------------------------------------------------------------
+#pragma mark Outline View Delegate Methods
+//------------------------------------------------------------------------------
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification
+{
+	NSArray *selectedObjects = self.elementsTreeController.selectedObjects;
+	ElementTreeNode *node = [selectedObjects lastObject];
+	
+	self.selectedElement = node.representedObject;
+	self.usagePage = [HXUsageTableTranslator nameForUsagePage:self.selectedElement.usagePage];
+	self.usageID = [HXUsageTableTranslator nameForUsagePage:self.selectedElement.usagePage
+													usageID:self.selectedElement.usage];
 }
 
 

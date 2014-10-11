@@ -8,14 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class ElementTreeNode;
+@class ElementTreeNode, HIDElement;
 
-@interface HXElementInspectorViewController : NSViewController
+@interface HXElementInspectorViewController : NSViewController <NSOutlineViewDelegate>
 
 @property IBOutlet NSOutlineView *elementsOutlineView;
 @property IBOutlet NSTreeController *elementsTreeController;
 @property ElementTreeNode *rootNode;
 
-@property IBOutlet NSTableView *propertiesTableView;
+@property HIDElement *selectedElement;
+@property NSString *usagePage;
+@property NSString *usageID;
+
 
 @end

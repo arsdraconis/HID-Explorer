@@ -57,7 +57,7 @@
 		case kIOHIDElementTypeCollection:
 		{
 			NSString *collectionType = [self collectionTypeForElement:element];
-			ret = [NSString stringWithFormat:@"%@ Collection", collectionType];
+			ret = [NSString stringWithFormat:@"Collection - %@", collectionType];
 			break;
 		}
 			

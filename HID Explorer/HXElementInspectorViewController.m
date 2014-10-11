@@ -87,38 +87,5 @@
 	}
 }
 
-//------------------------------------------------------------------------------
-#pragma mark Split View Delegate Methods
-//------------------------------------------------------------------------------
-
-- (BOOL)splitView:(NSSplitView *)splitView canCollapseSubview:(NSView *)subview
-{
-	return YES;
-}
-
-- (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMinimumPosition ofSubviewAt:(NSInteger)dividerIndex
-{
-	if (proposedMinimumPosition < 100)
-	{
-		return 100;
-	}
-	else
-	{
-		return proposedMinimumPosition;
-	}
-}
-
-- (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMaximumPosition ofSubviewAt:(NSInteger)dividerIndex
-{
-	CGFloat limit = splitView.bounds.size.height - 100;
-	if (proposedMaximumPosition > limit)
-	{
-		return limit;
-	}
-	else
-	{
-		return proposedMaximumPosition;
-	}
-}
 
 @end

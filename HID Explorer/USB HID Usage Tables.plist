@@ -307,19 +307,19 @@
 		<key>00</key>
 		<string>No Button Pressed</string>
 		<key>*</key>
-		<string>Button %ul</string>
+		<string>Button %d</string>
 	</dict>
 	<key>0x0A</key>
 	<dict>
 		<key>00</key>
 		<string>Undefined</string>
 		<key>*</key>
-		<string>Instance %ul</string>
+		<string>Instance %d</string>
 	</dict>
 	<key>0x10</key>
 	<dict>
 		<key>*</key>
-		<string>Unicode Character u%04x</string>
+		<string>Unicode Character \u%04x</string>
 	</dict>
 	<key>UsagePages</key>
 	<dict>

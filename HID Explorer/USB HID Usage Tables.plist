@@ -257,7 +257,7 @@
 	<key>0x03</key>
 	<dict>
 		<key>00</key>
-		<string>Undefined</string>
+		<string>Unidentified</string>
 		<key>01</key>
 		<string>Belt</string>
 		<key>02</key>
@@ -286,7 +286,7 @@
 	<key>0x04</key>
 	<dict>
 		<key>00</key>
-		<string>Undefined</string>
+		<string>Unidentified</string>
 		<key>01</key>
 		<string>Baseball Bat</string>
 		<key>02</key>
@@ -420,7 +420,7 @@
 	<key>0x06</key>
 	<dict>
 		<key>00</key>
-		<string>Undefined</string>
+		<string>Unidentified</string>
 		<key>20</key>
 		<string>Battery Strength</string>
 		<key>21</key>
@@ -605,7 +605,7 @@
 	<key>0x0A</key>
 	<dict>
 		<key>00</key>
-		<string>Undefined</string>
+		<string>Reserved</string>
 		<key>*</key>
 		<string>Instance %d</string>
 	</dict>

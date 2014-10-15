@@ -59,16 +59,20 @@
 												  object:nil];
 }
 
+
+//------------------------------------------------------------------------------
+#pragma mark Adding and Removing Devices
+//------------------------------------------------------------------------------
 - (IBAction)refreshDevices:(id)sender
 {
-	NSArray *devices = [HIDManager devices];
 	NSMutableArray *listItems = [self mutableArrayValueForKey:@"sourceListItems"];
+	[listItems removeAllObjects];
+	
+	NSArray *devices = [HIDManager devices];
 	for (HIDDevice *device in devices)
 	{
 		[HXSourceListItem insertDevice:device intoTree:listItems];
 	}
-	
-//	[self.sidebarTreeController setContent:self.sourceListItems];
 }
 
 - (void)deviceDidConnect:(NSNotification *)note
@@ -86,6 +90,8 @@
 		[HXSourceListItem removeNodeWithDevice:note.object inTree:listItems];
 	}
 }
+
+
 //------------------------------------------------------------------------------
 #pragma mark Outline View Delegate Methods
 //------------------------------------------------------------------------------
@@ -113,5 +119,6 @@
 	HXSourceListItem *node = (HXSourceListItem *)item;
 	return node.isLeaf;
 }
+
 
 @end

@@ -595,6 +595,8 @@
                                                 <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="0Fu-UM-wZU"/>
+                                        <menuItem title="Show Device List" keyEquivalent="0" id="FOn-0j-43s"/>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -669,12 +671,15 @@
             <objects>
                 <splitViewController id="A69-vO-hy0" customClass="HXSplitViewController" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem canCollapse="YES" holdingPriority="253" id="JlF-97-xSi"/>
+                        <splitViewItem holdingPriority="253" id="JlF-97-xSi"/>
                         <splitViewItem id="Vhs-GZ-1of"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="gnk-WB-w3h">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="A69-vO-hy0" id="8ce-nQ-02h"/>
+                        </connections>
                     </splitView>
                     <connections>
                         <segue destination="Ymo-s2-XoG" kind="relationship" relationship="splitItems" id="pMi-F3-kQb"/>
@@ -810,6 +815,7 @@
                                             </tableColumns>
                                             <connections>
                                                 <binding destination="JPv-iH-vCe" name="content" keyPath="arrangedObjects" id="RNa-0M-TQc"/>
+                                                <binding destination="JPv-iH-vCe" name="selectionIndexPaths" keyPath="selectionIndexPaths" previousBinding="RNa-0M-TQc" id="X5h-VE-kYb"/>
                                                 <outlet property="delegate" destination="Ymo-s2-XoG" id="B25-NG-tfA"/>
                                             </connections>
                                         </outlineView>
@@ -817,7 +823,7 @@
                                     <nil key="backgroundColor"/>
                                 </clipView>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="491" constant="200" id="VIv-f5-9tB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="490" constant="200" id="bFS-ds-IyF"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="PoD-CE-mqK">
                                     <rect key="frame" x="1" y="376.50466787815094" width="146" height="16"/>
@@ -838,6 +844,7 @@
                     </view>
                     <connections>
                         <outlet property="sidebarTreeController" destination="JPv-iH-vCe" id="W51-7b-YcW"/>
+                        <outlet property="sourceList" destination="4V4-t7-75f" id="Zsb-Yb-MjI"/>
                     </connections>
                 </viewController>
                 <customObject id="Iu0-c7-Z5v" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -869,7 +876,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="wge-as-zfe" name="value" keyPath="representedObject.product" id="gUL-6m-bBI">
+                                    <binding destination="wge-as-zfe" name="value" keyPath="parentViewController.representedObject" id="FFX-Ye-1xp">
                                         <dictionary key="options">
                                             <string key="NSNullPlaceholder">Unknown Product</string>
                                         </dictionary>

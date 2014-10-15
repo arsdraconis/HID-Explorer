@@ -17,6 +17,7 @@
 
 @property IBOutlet NSTreeController *sidebarTreeController;
 @property NSMutableArray *sourceListItems;
+@property IBOutlet NSOutlineView *sourceList;
 
 @end
 
@@ -41,6 +42,11 @@
 												 name:HIDManagerDeviceDidDisconnectNotification
 											   object:nil];
 	
+	[self.parentViewController bind:@"representedObject"
+						   toObject:self.sidebarTreeController
+						withKeyPath:@"selectedObjects.device"
+							options:nil];
+	
 	[HIDManager sharedManager];
 }
 
@@ -59,6 +65,10 @@
 												  object:nil];
 }
 
+- (void)dealloc
+{
+	[self.parentViewController unbind:@"representedObject"];
+}
 
 //------------------------------------------------------------------------------
 #pragma mark Adding and Removing Devices
@@ -73,8 +83,11 @@
 	{
 		[HXSourceListItem insertDevice:device intoTree:listItems];
 	}
+	
+	[self.sourceList expandItem:nil expandChildren:YES];
 }
 
+// TODO: Expand devices as they're added.
 - (void)deviceDidConnect:(NSNotification *)note
 {
 	NSLog(@"[HID Explorer] Device connected.");

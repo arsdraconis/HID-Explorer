@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "HXWindowManager.h"
-
 @interface AppDelegate ()
 
 @end
@@ -19,7 +17,6 @@
             
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application
-	self.windowManager = [[HXWindowManager alloc] init];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

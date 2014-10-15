@@ -41,7 +41,6 @@
 	{
 		_name = name ? [name copy] : nil;
 		_children = children ? [children mutableCopy] : [NSMutableArray array];
-		_device = nil;
 	}
 	return self;
 }

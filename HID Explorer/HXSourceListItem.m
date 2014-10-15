@@ -59,7 +59,7 @@
 @dynamic image;
 - (NSImage *)image
 {
-	if (self.isLeaf)
+	if (!self.isLeaf)
 	{
 		return nil;
 	}

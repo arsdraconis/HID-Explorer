@@ -32,6 +32,23 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 
 
 //------------------------------------------------------------------------------
+#pragma mark View Lifecycle
+//------------------------------------------------------------------------------
+- (void)viewDidLoad
+{
+	[self bind:@"representedObject"
+	  toObject:self.parentViewController.parentViewController
+   withKeyPath:@"representedObject"
+	   options:nil];
+}
+
+- (void)dealloc
+{
+	[self unbind:@"representedObject"];
+}
+
+
+//------------------------------------------------------------------------------
 #pragma mark Populating the Usage Pairs Table
 //------------------------------------------------------------------------------
 - (void)populateUsagePairs:(HIDDevice *)device
@@ -74,10 +91,12 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 //------------------------------------------------------------------------------
 - (void)viewWillAppear
 {
-	HIDDevice *device = (HIDDevice *)(self.parentViewController.representedObject);
-	self.representedObject = device;
+	NSLog(@"***** Represented object is %@", [self.representedObject lastObject]);
+	/*
+	HIDDevice *device = (HIDDevice *)(self.representedObject);
 	
 	[self populateUsagePairs:device];
+	*/
 }
 
 

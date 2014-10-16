@@ -42,11 +42,6 @@
 												 name:HIDManagerDeviceDidDisconnectNotification
 											   object:nil];
 	
-	[self.parentViewController bind:@"representedObject"
-						   toObject:self.sidebarTreeController
-						withKeyPath:@"selectedObjects.device"
-							options:nil];
-	
 	[HIDManager sharedManager];
 }
 
@@ -57,7 +52,6 @@
 
 - (void)dealloc
 {
-	[self.parentViewController unbind:@"representedObject"];
 	[[NSNotificationCenter defaultCenter] removeObserver:self
 													name:HIDManagerDeviceDidConnectNotification
 												  object:nil];
@@ -136,6 +130,12 @@
 {
 	HXSourceListItem *node = (HXSourceListItem *)item;
 	return node.isLeaf;
+}
+
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification
+{
+	HXSourceListItem *selection = [self.sidebarTreeController.selectedObjects lastObject];
+	self.parentViewController.representedObject = selection.device;
 }
 
 - (void)expandGroupItem:(HXSourceListItem *)item

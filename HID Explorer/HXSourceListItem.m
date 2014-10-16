@@ -86,7 +86,7 @@
 	return result;
 }
 
-+ (void)insertDevice:(HIDDevice *)device intoTree:(NSMutableArray *)rootArray
++ (HXSourceListItem *)insertDevice:(HIDDevice *)device intoTree:(NSMutableArray *)rootArray
 {
 	NSString *transport = nil;
 	transport = device.transport ? device.transport : @"Unknown Transport";
@@ -101,6 +101,8 @@
 	}
 	
 	[[branch mutableArrayValueForKey:@"children"] addObject:item];
+	
+	return branch;
 }
 
 + (void)removeNodeWithDevice:(HIDDevice *)device inTree:(NSMutableArray *)rootArray

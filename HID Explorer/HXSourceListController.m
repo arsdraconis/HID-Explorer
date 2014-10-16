@@ -55,19 +55,15 @@
 	[self refreshDevices:self];
 }
 
-- (void)viewDidDisappear
+- (void)dealloc
 {
+	[self.parentViewController unbind:@"representedObject"];
 	[[NSNotificationCenter defaultCenter] removeObserver:self
 													name:HIDManagerDeviceDidConnectNotification
 												  object:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self
 													name:HIDManagerDeviceDidDisconnectNotification
 												  object:nil];
-}
-
-- (void)dealloc
-{
-	[self.parentViewController unbind:@"representedObject"];
 }
 
 //------------------------------------------------------------------------------
@@ -84,22 +80,31 @@
 		[HXSourceListItem insertDevice:device intoTree:listItems];
 	}
 	
-	[self.sourceList expandItem:nil expandChildren:YES];
+	// Using GCD to queue this at the end of the current run loop iteration.
+	dispatch_async(dispatch_get_main_queue(),
+	^{
+		[self.sourceList expandItem:nil expandChildren:YES];
+		[self.sourceList selectRowIndexes:[NSIndexSet indexSetWithIndex:1]
+					 byExtendingSelection:NO];
+	});
 }
 
-// TODO: Expand devices as they're added.
 - (void)deviceDidConnect:(NSNotification *)note
 {
 	NSLog(@"[HID Explorer] Device connected.");
+	
 	NSMutableArray *listItems = [self mutableArrayValueForKey:@"sourceListItems"];
-	[HXSourceListItem insertDevice:note.object intoTree:listItems];
+	id item = [HXSourceListItem insertDevice:note.object intoTree:listItems];
+	[self expandGroupItem:item];
 }
 
 - (void)deviceDidDisconnect:(NSNotification *)note
 {
 	NSLog(@"[HID Explorer] Device disconnected.");
+	
 	NSMutableArray *listItems = [self mutableArrayValueForKey:@"sourceListItems"];
-	@autoreleasepool {
+	@autoreleasepool
+	{
 		[HXSourceListItem removeNodeWithDevice:note.object inTree:listItems];
 	}
 }
@@ -131,6 +136,15 @@
 {
 	HXSourceListItem *node = (HXSourceListItem *)item;
 	return node.isLeaf;
+}
+
+- (void)expandGroupItem:(HXSourceListItem *)item
+{
+	// Using GCD to queue it at the end of the current run loop iteration.
+	dispatch_async(dispatch_get_main_queue(),
+	^{
+		[self.sourceList expandItem:item expandChildren:YES];
+	});
 }
 
 

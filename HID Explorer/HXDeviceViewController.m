@@ -51,6 +51,15 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 //------------------------------------------------------------------------------
 #pragma mark Populating the Usage Pairs Table
 //------------------------------------------------------------------------------
+- (void)setRepresentedObject:(id)representedObject
+{
+	[super setRepresentedObject:representedObject];
+	if (representedObject)
+	{
+		[self populateUsagePairs:(HIDDevice *)representedObject];
+	}
+}
+
 - (void)populateUsagePairs:(HIDDevice *)device
 {
 	// Loop through the usage pairs and add them to a dictionary.
@@ -83,20 +92,6 @@ extern const NSString * HIDDeviceUsagePairsUsagePageKey;
 		[self.usagePairsArrayController addObject:newPair];
 	}
 	
-}
-
-
-//------------------------------------------------------------------------------
-#pragma mark View Lifecycle
-//------------------------------------------------------------------------------
-- (void)viewWillAppear
-{
-	NSLog(@"***** Represented object is %@", [self.representedObject lastObject]);
-	/*
-	HIDDevice *device = (HIDDevice *)(self.representedObject);
-	
-	[self populateUsagePairs:device];
-	*/
 }
 
 

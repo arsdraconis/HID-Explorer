@@ -98,6 +98,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1614A72819EFD38800617C10 /* Elements Tab */ = {
+			isa = PBXGroup;
+			children = (
+				1625813E19E4014D000A0ADF /* ElementTreeNode.h */,
+				1625813F19E4014D000A0ADF /* ElementTreeNode.m */,
+				16E17FCA19E527F3000827BC /* HXElementInspectorViewController.h */,
+				16E17FCB19E527F3000827BC /* HXElementInspectorViewController.m */,
+			);
+			name = "Elements Tab";
+			sourceTree = "<group>";
+		};
 		16390AC119ED611900EF05CB /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +152,7 @@
 				1671451C19C041F4008881D3 /* Supporting Files */,
 				16E9DA0A19C99E01005E193B /* HXDeviceViewController.h */,
 				16E9DA0B19C99E01005E193B /* HXDeviceViewController.m */,
-				16E17FCA19E527F3000827BC /* HXElementInspectorViewController.h */,
-				16E17FCB19E527F3000827BC /* HXElementInspectorViewController.m */,
+				1614A72819EFD38800617C10 /* Elements Tab */,
 			);
 			path = "HID Explorer";
 			sourceTree = "<group>";
@@ -151,8 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				16764DAF19E7D50900B2BCD0 /* USB HID Usage Tables.plist */,
-				1625813E19E4014D000A0ADF /* ElementTreeNode.h */,
-				1625813F19E4014D000A0ADF /* ElementTreeNode.m */,
 				1671453F19C04206008881D3 /* HIDKit.framework */,
 				1671451D19C041F4008881D3 /* Info.plist */,
 				1671451E19C041F4008881D3 /* main.m */,

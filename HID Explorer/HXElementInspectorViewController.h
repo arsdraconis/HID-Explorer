@@ -12,10 +12,6 @@
 
 @interface HXElementInspectorViewController : NSViewController <NSOutlineViewDelegate>
 
-@property IBOutlet NSOutlineView *elementsOutlineView;
-@property IBOutlet NSTreeController *elementsTreeController;
-@property ElementTreeNode *rootNode;
-
 @property HIDElement *selectedElement;
 @property NSString *usagePage;
 @property NSString *usageID;

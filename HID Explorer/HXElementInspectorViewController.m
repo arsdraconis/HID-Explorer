@@ -17,6 +17,9 @@
 //------------------------------------------------------------------------------
 @interface HXElementInspectorViewController ()
 
+@property IBOutlet NSOutlineView *elementsOutlineView;
+@property IBOutlet NSTreeController *elementsTreeController;
+@property ElementTreeNode *rootNode;
 
 @end
 
@@ -29,18 +32,33 @@
 //------------------------------------------------------------------------------
 #pragma mark View Lifecycle
 //------------------------------------------------------------------------------
-- (void)viewWillAppear
+
+- (void)viewDidLoad
 {
-	HIDDevice *device = (HIDDevice *)(self.parentViewController.representedObject);
-	self.representedObject = device;
-	
-	[self buildElementTree:device];
+	[self bind:@"representedObject"
+	  toObject:self.parentViewController.parentViewController
+   withKeyPath:@"representedObject"
+	   options:nil];
 }
 
+- (void)dealloc
+{
+	[self unbind:@"representedObject"];
+}
 
 //------------------------------------------------------------------------------
 #pragma mark Building the Element Tree
 //------------------------------------------------------------------------------
+- (void)setRepresentedObject:(id)representedObject
+{
+	[super setRepresentedObject:representedObject];
+	
+	if (representedObject)
+	{
+		[self buildElementTree:(HIDDevice *)representedObject];
+	}
+}
+
 - (void)buildElementTree:(HIDDevice *)device
 {
 	ElementTreeNode *temp = [ElementTreeNode treeNodeWithRepresentedObject:nil];

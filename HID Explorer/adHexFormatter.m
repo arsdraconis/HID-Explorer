@@ -17,8 +17,25 @@
 		return nil;
 	}
 	
-	// TODO: Fix me to always use groups of 2
-	return [NSString stringWithFormat:@"0x%04lX", (long)[obj integerValue]];
+	NSUInteger value = ((NSNumber *)obj).unsignedIntegerValue;
+	NSString *output = nil;
+	
+	do
+	{
+		NSUInteger hexPair = value & 0xFF;
+		value = value >> 8;
+		@autoreleasepool
+		{
+			NSString *pairString = [NSString stringWithFormat:@"%02lX", (unsigned long)hexPair];
+			if (!output)
+				output = pairString;
+			else
+				output = [pairString stringByAppendingString:output];
+		}
+	}
+	while (value);
+	
+	return [@"0x" stringByAppendingString:output];
 }
 
 - (BOOL)getObjectValue:(out __autoreleasing id *)obj

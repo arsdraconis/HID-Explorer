@@ -9,6 +9,7 @@
 #import <HIDKit/HIDKit.h>
 
 #import "ElementTreeNode.h"
+#import "HXUsageTableTranslator.h"
 
 
 @implementation ElementTreeNode
@@ -118,6 +119,20 @@
 	}
 	
 	return ret;
+}
+
+@dynamic usagePage;
+- (NSString *)usagePage
+{
+	HIDElement *element = (HIDElement *)self.representedObject;
+	return [HXUsageTableTranslator nameForUsagePage:element.usagePage];
+}
+
+@dynamic usageID;
+- (NSString *)usageID
+{
+	HIDElement *element = (HIDElement *)self.representedObject;
+	return [HXUsageTableTranslator nameForUsagePage:element.usagePage usageID:element.usage];
 }
 
 @end

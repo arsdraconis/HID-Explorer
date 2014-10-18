@@ -14,4 +14,7 @@
 @property (readonly) NSString *type;
 @property (readonly) NSUInteger cookie;
 
+@property (readonly) NSString *usagePage;
+@property (readonly) NSString *usageID;
+
 @end

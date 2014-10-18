@@ -18,8 +18,14 @@
 	}
 	
 	NSUInteger value = ((NSNumber *)obj).unsignedIntegerValue;
-	NSString *output = nil;
+	if (!value)
+	{
+		return @"0x00";
+	}
 	
+	NSString *output = @"";
+	
+	// I'm sure there's a way to do this more efficiently.
 	do
 	{
 		NSUInteger hexPair = value & 0xFF;
@@ -27,10 +33,7 @@
 		@autoreleasepool
 		{
 			NSString *pairString = [NSString stringWithFormat:@"%02lX", (unsigned long)hexPair];
-			if (!output)
-				output = pairString;
-			else
-				output = [pairString stringByAppendingString:output];
+			output = [pairString stringByAppendingString:output];
 		}
 	}
 	while (value);

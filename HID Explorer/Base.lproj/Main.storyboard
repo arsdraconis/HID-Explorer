@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SPi-Rn-N7U">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SPi-Rn-N7U">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6249"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -1072,10 +1072,10 @@
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="leading" secondItem="BfK-8x-en0" secondAttribute="leading" constant="1" id="9Am-JV-jVj"/>
-                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="centerX" secondItem="BfK-8x-en0" secondAttribute="centerX" id="Mg2-rt-5zJ"/>
-                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="top" secondItem="BfK-8x-en0" secondAttribute="top" constant="-15" id="jZa-Jy-AXq"/>
-                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="centerY" secondItem="BfK-8x-en0" secondAttribute="centerY" id="kLC-HJ-mIe"/>
+                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="top" secondItem="BfK-8x-en0" secondAttribute="top" constant="-15" id="FLX-mJ-Osw"/>
+                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="leading" secondItem="BfK-8x-en0" secondAttribute="leading" constant="1" id="Zk5-jN-fOs"/>
+                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="centerY" secondItem="BfK-8x-en0" secondAttribute="centerY" id="bhh-Rf-kTl"/>
+                                                                <constraint firstItem="GWc-th-KY5" firstAttribute="centerX" secondItem="BfK-8x-en0" secondAttribute="centerX" id="wna-oX-2qd"/>
                                                             </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -1802,7 +1802,7 @@
                                                             <rect key="frame" x="826" y="1" width="60" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p82-k4-wDp">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p82-k4-wDp">
                                                                     <rect key="frame" x="0.0" y="-16" width="64" height="48"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="csN-vD-tUI"/>
                                                                     <connections>
@@ -1815,6 +1815,12 @@
                                                                     </connections>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="p82-k4-wDp" firstAttribute="centerY" secondItem="Wpq-ns-eYp" secondAttribute="centerY" id="DKS-2b-91I"/>
+                                                                <constraint firstAttribute="trailing" secondItem="p82-k4-wDp" secondAttribute="trailing" constant="-4" id="Gog-eT-fzZ"/>
+                                                                <constraint firstItem="p82-k4-wDp" firstAttribute="top" secondItem="Wpq-ns-eYp" secondAttribute="top" constant="-15" id="iVn-de-7YV"/>
+                                                                <constraint firstItem="p82-k4-wDp" firstAttribute="leading" secondItem="Wpq-ns-eYp" secondAttribute="leading" id="jyM-Iw-6Ab"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -1835,7 +1841,7 @@
                                                             <rect key="frame" x="893" y="1" width="60" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2c-ZS-lMh">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2c-ZS-lMh">
                                                                     <rect key="frame" x="0.0" y="-16" width="64" height="48"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="OwX-mB-yij"/>
                                                                     <connections>
@@ -1848,6 +1854,12 @@
                                                                     </connections>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="c2c-ZS-lMh" secondAttribute="trailing" constant="-4" id="0i1-or-giY"/>
+                                                                <constraint firstItem="c2c-ZS-lMh" firstAttribute="centerY" secondItem="M16-Ae-IFZ" secondAttribute="centerY" id="QNv-4r-3eg"/>
+                                                                <constraint firstItem="c2c-ZS-lMh" firstAttribute="top" secondItem="M16-Ae-IFZ" secondAttribute="top" constant="-15" id="VGG-rK-qOv"/>
+                                                                <constraint firstItem="c2c-ZS-lMh" firstAttribute="leading" secondItem="M16-Ae-IFZ" secondAttribute="leading" id="tci-Ys-nwA"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -1868,7 +1880,7 @@
                                                             <rect key="frame" x="952" y="1" width="60" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdB-t6-D3N">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wdB-t6-D3N">
                                                                     <rect key="frame" x="0.0" y="-16" width="64" height="48"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="smp-iU-I9c"/>
                                                                     <connections>
@@ -1881,6 +1893,12 @@
                                                                     </connections>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="wdB-t6-D3N" firstAttribute="leading" secondItem="AYR-MV-0oi" secondAttribute="leading" id="4xN-vP-WlO"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wdB-t6-D3N" secondAttribute="trailing" constant="-4" id="NaO-OG-Ebc"/>
+                                                                <constraint firstItem="wdB-t6-D3N" firstAttribute="top" secondItem="AYR-MV-0oi" secondAttribute="top" constant="-15" id="Y4i-BL-WXc"/>
+                                                                <constraint firstItem="wdB-t6-D3N" firstAttribute="centerY" secondItem="AYR-MV-0oi" secondAttribute="centerY" id="d0t-Rf-Jl3"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -1901,7 +1919,7 @@
                                                             <rect key="frame" x="1015" y="1" width="60" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-oa-4dy">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-oa-4dy">
                                                                     <rect key="frame" x="0.0" y="-16" width="64" height="48"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="sq6-GZ-t7H"/>
                                                                     <connections>
@@ -1914,6 +1932,12 @@
                                                                     </connections>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="lxn-oa-4dy" firstAttribute="centerY" secondItem="JI1-Kc-nL8" secondAttribute="centerY" id="GGV-Wq-eiE"/>
+                                                                <constraint firstAttribute="trailing" secondItem="lxn-oa-4dy" secondAttribute="trailing" constant="-4" id="M4p-3l-Cxq"/>
+                                                                <constraint firstItem="lxn-oa-4dy" firstAttribute="top" secondItem="JI1-Kc-nL8" secondAttribute="top" constant="-15" id="TsS-n7-daE"/>
+                                                                <constraint firstItem="lxn-oa-4dy" firstAttribute="leading" secondItem="JI1-Kc-nL8" secondAttribute="leading" id="yls-3d-ecz"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -1934,7 +1958,7 @@
                                                             <rect key="frame" x="1078" y="1" width="60" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20Q-SC-MJv">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="20Q-SC-MJv">
                                                                     <rect key="frame" x="0.0" y="-16" width="64" height="48"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="zPg-6n-rgm"/>
                                                                     <connections>
@@ -1947,6 +1971,12 @@
                                                                     </connections>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="20Q-SC-MJv" firstAttribute="leading" secondItem="J4x-ZP-0zA" secondAttribute="leading" id="4Cr-tb-sed"/>
+                                                                <constraint firstAttribute="trailing" secondItem="20Q-SC-MJv" secondAttribute="trailing" constant="-4" id="O5Z-WF-cnL"/>
+                                                                <constraint firstItem="20Q-SC-MJv" firstAttribute="top" secondItem="J4x-ZP-0zA" secondAttribute="top" constant="-15" id="c3P-C3-BOm"/>
+                                                                <constraint firstItem="20Q-SC-MJv" firstAttribute="centerY" secondItem="J4x-ZP-0zA" secondAttribute="centerY" id="u3h-l7-5IC"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -1967,7 +1997,7 @@
                                                             <rect key="frame" x="1141" y="1" width="60" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-gS-o7h">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-gS-o7h">
                                                                     <rect key="frame" x="0.0" y="-16" width="64" height="48"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="VhC-Af-wZB"/>
                                                                     <connections>
@@ -1980,6 +2010,12 @@
                                                                     </connections>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="VEP-gS-o7h" firstAttribute="top" secondItem="cMy-A0-HY6" secondAttribute="top" constant="-15" id="AsA-3u-ta8"/>
+                                                                <constraint firstItem="VEP-gS-o7h" firstAttribute="centerY" secondItem="cMy-A0-HY6" secondAttribute="centerY" id="CH5-nx-cCk"/>
+                                                                <constraint firstItem="VEP-gS-o7h" firstAttribute="leading" secondItem="cMy-A0-HY6" secondAttribute="leading" id="GLL-vJ-rAg"/>
+                                                                <constraint firstAttribute="trailing" secondItem="VEP-gS-o7h" secondAttribute="trailing" constant="-4" id="I94-DT-loU"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -2000,7 +2036,7 @@
                                                             <rect key="frame" x="1204" y="1" width="60" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-8w-ctX">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-8w-ctX">
                                                                     <rect key="frame" x="0.0" y="-16" width="64" height="48"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSMenuOnStateTemplate" id="ebl-6g-kKr"/>
                                                                     <connections>
@@ -2013,6 +2049,12 @@
                                                                     </connections>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="xfa-8w-ctX" secondAttribute="trailing" constant="-4" id="4yN-Js-aUP"/>
+                                                                <constraint firstItem="xfa-8w-ctX" firstAttribute="centerY" secondItem="TJW-0d-Tne" secondAttribute="centerY" id="Lbb-Qe-TrI"/>
+                                                                <constraint firstItem="xfa-8w-ctX" firstAttribute="top" secondItem="TJW-0d-Tne" secondAttribute="top" constant="-15" id="xhM-13-1hn"/>
+                                                                <constraint firstItem="xfa-8w-ctX" firstAttribute="leading" secondItem="TJW-0d-Tne" secondAttribute="leading" id="zGX-PE-j3t"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -2336,6 +2378,7 @@
                     <connections>
                         <outlet property="elementsOutlineView" destination="sgp-Eb-5dl" id="PK2-0l-G3j"/>
                         <outlet property="elementsTreeController" destination="cMF-xd-IF4" id="HQ9-KE-J7z"/>
+                        <outlet property="liveUpdateCheckbox" destination="dXr-cW-RdK" id="XXC-vy-v3E"/>
                     </connections>
                 </viewController>
                 <customObject id="PHa-St-JJz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

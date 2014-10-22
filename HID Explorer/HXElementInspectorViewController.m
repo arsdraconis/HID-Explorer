@@ -21,6 +21,8 @@
 @property IBOutlet NSTreeController *elementsTreeController;
 @property ElementTreeNode *rootNode;
 
+@property IBOutlet NSButton *liveUpdateCheckbox;
+
 @end
 
 
@@ -51,11 +53,14 @@
 //------------------------------------------------------------------------------
 - (void)setRepresentedObject:(id)representedObject
 {
-	[super setRepresentedObject:representedObject];
+	HIDDevice *device = representedObject;
 	
-	if (representedObject)
+	[super setRepresentedObject:device];
+	
+	if (device)
 	{
-		[self buildElementTree:(HIDDevice *)representedObject];
+		[self buildElementTree:device];
+		[self setLiveUpdate:self];
 	}
 }
 
@@ -95,14 +100,16 @@
 //------------------------------------------------------------------------------
 - (IBAction)setLiveUpdate:(id)sender
 {
-	NSButton *checkBox = (NSButton *)sender;
-	if (checkBox.state == NSOnState)
+	BOOL shouldLiveUpdate = (BOOL)self.liveUpdateCheckbox.state;
+	
+	HIDDevice *device = self.representedObject;
+	if (shouldLiveUpdate)
 	{
-		NSLog(@"Live updating on.");
+		[device open];
 	}
 	else
 	{
-		NSLog(@"Live updating off.");
+		[device close];
 	}
 }
 
@@ -116,9 +123,6 @@
 	ElementTreeNode *node = [selectedObjects lastObject];
 	
 	self.selectedElement = node.representedObject;
-	self.usagePage = [HXUsageTableTranslator nameForUsagePage:self.selectedElement.usagePage];
-	self.usageID = [HXUsageTableTranslator nameForUsagePage:self.selectedElement.usagePage
-													usageID:self.selectedElement.usage];
 }
 
 

@@ -436,6 +436,447 @@
 		<key>26</key>
 		<string>Security Code Cleared</string>
 	</dict>
+	<key>0x07</key>
+	<dict>
+		<key>00</key>
+		<string>Reserved (No Event)</string>
+		<key>01</key>
+		<string>Keyboard Error - Roll Over</string>
+		<key>02</key>
+		<string>Keyboard Error - POST Failure</string>
+		<key>03</key>
+		<string>Keyboard Error - Undefined</string>
+		<key>04</key>
+		<string>Keyboard a and A</string>
+		<key>05</key>
+		<string>Keyboard b and B</string>
+		<key>06</key>
+		<string>Keyboard c and C</string>
+		<key>07</key>
+		<string>Keyboard d and D</string>
+		<key>08</key>
+		<string>Keyboard e and E</string>
+		<key>09</key>
+		<string>Keyboard f and F</string>
+		<key>0A</key>
+		<string>Keyboard g and G</string>
+		<key>0B</key>
+		<string>Keyboard h and H</string>
+		<key>0C</key>
+		<string>Keyboard i and I</string>
+		<key>0D</key>
+		<string>Keyboard j and J</string>
+		<key>0E</key>
+		<string>Keyboard k and K</string>
+		<key>0F</key>
+		<string>Keyboard l and L</string>
+		<key>10</key>
+		<string>Keyboard m and M</string>
+		<key>11</key>
+		<string>Keyboard n and N</string>
+		<key>12</key>
+		<string>Keyboard o and O</string>
+		<key>13</key>
+		<string>Keyboard p and P</string>
+		<key>14</key>
+		<string>Keyboard q and Q</string>
+		<key>15</key>
+		<string>Keyboard r and R</string>
+		<key>16</key>
+		<string>Keyboard s and S</string>
+		<key>17</key>
+		<string>Keyboard t and T</string>
+		<key>18</key>
+		<string>Keyboard u and U</string>
+		<key>19</key>
+		<string>Keyboard v and V</string>
+		<key>1A</key>
+		<string>Keyboard w and W</string>
+		<key>1B</key>
+		<string>Keyboard x and X</string>
+		<key>1C</key>
+		<string>Keyboard y and Y</string>
+		<key>1D</key>
+		<string>Keyboard z and Z</string>
+		<key>1E</key>
+		<string>Keyboard 1 and !</string>
+		<key>1F</key>
+		<string>Keyboard 2 and @</string>
+		<key>20</key>
+		<string>Keyboard 3 and #</string>
+		<key>21</key>
+		<string>Keyboard 4 and $</string>
+		<key>22</key>
+		<string>Keyboard 5 and %</string>
+		<key>23</key>
+		<string>Keyboard 6 and ^</string>
+		<key>24</key>
+		<string>Keyboard 7 and &amp;</string>
+		<key>25</key>
+		<string>Keyboard 8 and *</string>
+		<key>26</key>
+		<string>Keyboard 9 and (</string>
+		<key>27</key>
+		<string>Keyboard 0 and )</string>
+		<key>28</key>
+		<string>Keyboard Return (Enter)</string>
+		<key>29</key>
+		<string>Keyboard Escape</string>
+		<key>2A</key>
+		<string>Keyboard Delete (Backspace)</string>
+		<key>2B</key>
+		<string>Keyboard Tab</string>
+		<key>2C</key>
+		<string>Keyboard Spacebar</string>
+		<key>2D</key>
+		<string>Keyboard - and _</string>
+		<key>2E</key>
+		<string>Keyboard = and +</string>
+		<key>2F</key>
+		<string>Keyboard [ and {</string>
+		<key>30</key>
+		<string>Keyboard ] and }</string>
+		<key>31</key>
+		<string>Keyboard \ and |</string>
+		<key>32</key>
+		<string>Keyboard Non-US # and ~</string>
+		<key>33</key>
+		<string>Keyboard ; and :</string>
+		<key>34</key>
+		<string>Keyboard &apos; and &quot;</string>
+		<key>35</key>
+		<string>Keyboard Grave Accent and Tilde</string>
+		<key>36</key>
+		<string>Keyboard , and &lt;</string>
+		<key>37</key>
+		<string>Keyboard . and &gt;</string>
+		<key>38</key>
+		<string>Keyboard / and ?</string>
+		<key>39</key>
+		<string>Keyboard Caps Lock</string>
+		<key>3A</key>
+		<string>Keyboard F1</string>
+		<key>3B</key>
+		<string>Keyboard F2</string>
+		<key>3C</key>
+		<string>Keyboard F3</string>
+		<key>3D</key>
+		<string>Keyboard F4</string>
+		<key>3E</key>
+		<string>Keyboard F5</string>
+		<key>3F</key>
+		<string>Keyboard F6</string>
+		<key>40</key>
+		<string>Keyboard F7</string>
+		<key>41</key>
+		<string>Keyboard F8</string>
+		<key>42</key>
+		<string>Keyboard F9</string>
+		<key>43</key>
+		<string>Keyboard F10</string>
+		<key>44</key>
+		<string>Keyboard F11</string>
+		<key>45</key>
+		<string>Keyboard F12</string>
+		<key>46</key>
+		<string>Keyboard Print Screen</string>
+		<key>47</key>
+		<string>Keyboard Scroll Lock</string>
+		<key>48</key>
+		<string>Keyboard Pause</string>
+		<key>49</key>
+		<string>Keyboard Insert</string>
+		<key>4A</key>
+		<string>Keyboard Home</string>
+		<key>4B</key>
+		<string>Keyboard PageUp</string>
+		<key>4C</key>
+		<string>Keyboard Delete Forward</string>
+		<key>4D</key>
+		<string>Keyboard End</string>
+		<key>4E</key>
+		<string>Keyboard PageDown</string>
+		<key>4F</key>
+		<string>Keyboard Right Arrow</string>
+		<key>50</key>
+		<string>Keyboard Left Arrow</string>
+		<key>51</key>
+		<string>Keyboard Down Arrow</string>
+		<key>52</key>
+		<string>Keyboard Up Arrow</string>
+		<key>53</key>
+		<string>Keypad Num Lock and Clear</string>
+		<key>54</key>
+		<string>Keypad /</string>
+		<key>55</key>
+		<string>Keypad *</string>
+		<key>56</key>
+		<string>Keypad -</string>
+		<key>57</key>
+		<string>Keypad +</string>
+		<key>58</key>
+		<string>Keypad Enter</string>
+		<key>59</key>
+		<string>Keypad 1 and End</string>
+		<key>5A</key>
+		<string>Keypad 2 and Down Arrow</string>
+		<key>5B</key>
+		<string>Keypad 3 and PageDown</string>
+		<key>5C</key>
+		<string>Keypad 4 and Left Arrow</string>
+		<key>5D</key>
+		<string>Keypad 5</string>
+		<key>5E</key>
+		<string>Keypad 6 and Right Arrow</string>
+		<key>5F</key>
+		<string>Keypad 7 and Home</string>
+		<key>60</key>
+		<string>Keypad 8 and Up Arrow</string>
+		<key>61</key>
+		<string>Keypad 9 and PageUp</string>
+		<key>62</key>
+		<string>Keypad 0 and Insert</string>
+		<key>63</key>
+		<string>Keypad . and Delete</string>
+		<key>64</key>
+		<string>Keyboard Non-US \ and |</string>
+		<key>65</key>
+		<string>Keyboard Application</string>
+		<key>66</key>
+		<string>Keyboard Power</string>
+		<key>67</key>
+		<string>Keypad =</string>
+		<key>68</key>
+		<string>Keyboard F13</string>
+		<key>69</key>
+		<string>Keyboard F14</string>
+		<key>6A</key>
+		<string>Keyboard F15</string>
+		<key>6B</key>
+		<string>Keyboard F16</string>
+		<key>6C</key>
+		<string>Keyboard F17</string>
+		<key>6D</key>
+		<string>Keyboard F18</string>
+		<key>6E</key>
+		<string>Keyboard F19</string>
+		<key>6F</key>
+		<string>Keyboard F20</string>
+		<key>70</key>
+		<string>Keyboard F21</string>
+		<key>71</key>
+		<string>Keyboard F22</string>
+		<key>72</key>
+		<string>Keyboard F23</string>
+		<key>73</key>
+		<string>Keyboard F24</string>
+		<key>74</key>
+		<string>Keyboard Execute</string>
+		<key>75</key>
+		<string>Keyboard Help</string>
+		<key>76</key>
+		<string>Keyboard Menu</string>
+		<key>77</key>
+		<string>Keyboard Select</string>
+		<key>78</key>
+		<string>Keyboard Stop</string>
+		<key>79</key>
+		<string>Keyboard Again</string>
+		<key>7A</key>
+		<string>Keyboard Undo</string>
+		<key>7B</key>
+		<string>Keyboard Cut</string>
+		<key>7C</key>
+		<string>Keyboard Copy</string>
+		<key>7D</key>
+		<string>Keyboard Paste</string>
+		<key>7E</key>
+		<string>Keyboard Find</string>
+		<key>7F</key>
+		<string>Keyboard Mute</string>
+		<key>80</key>
+		<string>Keyboard Volume Up</string>
+		<key>81</key>
+		<string>Keyboard Volume Down</string>
+		<key>82</key>
+		<string>Keyboard Locking Caps Lock</string>
+		<key>83</key>
+		<string>Keyboard Locking Num Lock</string>
+		<key>84</key>
+		<string>Keyboard Locking Scroll Lock</string>
+		<key>85</key>
+		<string>Keypad Comma</string>
+		<key>86</key>
+		<string>Keypad Equal Sign</string>
+		<key>87</key>
+		<string>Keyboard International 1</string>
+		<key>88</key>
+		<string>Keyboard International 2</string>
+		<key>89</key>
+		<string>Keyboard International 3</string>
+		<key>8A</key>
+		<string>Keyboard International 4</string>
+		<key>8B</key>
+		<string>Keyboard International 5</string>
+		<key>8C</key>
+		<string>Keyboard International 6</string>
+		<key>8D</key>
+		<string>Keyboard International 7</string>
+		<key>8E</key>
+		<string>Keyboard International 8</string>
+		<key>8F</key>
+		<string>Keyboard International 9</string>
+		<key>90</key>
+		<string>Keyboard LANG1</string>
+		<key>91</key>
+		<string>Keyboard LANG2</string>
+		<key>92</key>
+		<string>Keyboard LANG3</string>
+		<key>93</key>
+		<string>Keyboard LANG4</string>
+		<key>94</key>
+		<string>Keyboard LANG5</string>
+		<key>95</key>
+		<string>Keyboard LANG6</string>
+		<key>96</key>
+		<string>Keyboard LANG7</string>
+		<key>97</key>
+		<string>Keyboard LANG8</string>
+		<key>98</key>
+		<string>Keyboard LANG9</string>
+		<key>99</key>
+		<string>Keyboard Alternate Erase</string>
+		<key>9A</key>
+		<string>Keyboard SysReq/Attention</string>
+		<key>9B</key>
+		<string>Keyboard Cancel</string>
+		<key>9C</key>
+		<string>Keyboard Clear</string>
+		<key>9D</key>
+		<string>Keyboard Prior</string>
+		<key>9E</key>
+		<string>Keyboard Return</string>
+		<key>9F</key>
+		<string>Keyboard Separator</string>
+		<key>A0</key>
+		<string>Keyboard Out</string>
+		<key>A1</key>
+		<string>Keyboard Oper</string>
+		<key>A2</key>
+		<string>Keyboard Clear/Again</string>
+		<key>A3</key>
+		<string>Keyboard CrSel/Props</string>
+		<key>A4</key>
+		<string>Keyboard ExSel</string>
+		<key>B0</key>
+		<string>Keypad 00</string>
+		<key>B1</key>
+		<string>Keypad 000</string>
+		<key>B2</key>
+		<string>Thousands Separator</string>
+		<key>B3</key>
+		<string>Decimal Separator</string>
+		<key>B4</key>
+		<string>Currency Unit</string>
+		<key>B5</key>
+		<string>Currency Sub-unit</string>
+		<key>B6</key>
+		<string>Keypad (</string>
+		<key>B7</key>
+		<string>Keypad )</string>
+		<key>B8</key>
+		<string>Keypad {</string>
+		<key>B9</key>
+		<string>Keypad }</string>
+		<key>BA</key>
+		<string>Keypad Tab</string>
+		<key>BB</key>
+		<string>Keypad Backspace</string>
+		<key>BC</key>
+		<string>Keypad A</string>
+		<key>BD</key>
+		<string>Keypad B</string>
+		<key>BE</key>
+		<string>Keypad C</string>
+		<key>BF</key>
+		<string>Keypad D</string>
+		<key>C0</key>
+		<string>Keypad E</string>
+		<key>C1</key>
+		<string>Keypad F</string>
+		<key>C2</key>
+		<string>Keypad XOR</string>
+		<key>C3</key>
+		<string>Keypad ^</string>
+		<key>C4</key>
+		<string>Keypad %</string>
+		<key>C5</key>
+		<string>Keypad &lt;</string>
+		<key>C6</key>
+		<string>Keypad &gt;</string>
+		<key>C7</key>
+		<string>Keypad &amp;</string>
+		<key>C8</key>
+		<string>Keypad &amp;&amp;</string>
+		<key>C9</key>
+		<string>Keypad |</string>
+		<key>CA</key>
+		<string>Keypad ||</string>
+		<key>CB</key>
+		<string>Keypad :</string>
+		<key>CC</key>
+		<string>Keypad #</string>
+		<key>CD</key>
+		<string>Keypad Space</string>
+		<key>CE</key>
+		<string>Keypad @</string>
+		<key>CF</key>
+		<string>Keypad !</string>
+		<key>D0</key>
+		<string>Keypad Memory Store</string>
+		<key>D1</key>
+		<string>Keypad Memory Recall</string>
+		<key>D2</key>
+		<string>Keypad Memory Clear</string>
+		<key>D3</key>
+		<string>Keypad Memory Add</string>
+		<key>D4</key>
+		<string>Keypad Memory Subtract</string>
+		<key>D5</key>
+		<string>Keypad Memory Multiply</string>
+		<key>D6</key>
+		<string>Keypad Memory Divide</string>
+		<key>D7</key>
+		<string>Keypad +/-</string>
+		<key>D8</key>
+		<string>Keypad Clear</string>
+		<key>D9</key>
+		<string>Keypad Clear Entry</string>
+		<key>DA</key>
+		<string>Keypad Binary</string>
+		<key>DB</key>
+		<string>Keypad Octal</string>
+		<key>DC</key>
+		<string>Keypad Decimal</string>
+		<key>DD</key>
+		<string>Keypad Hexadecimal</string>
+		<key>E0</key>
+		<string>Keyboard LeftControl</string>
+		<key>E1</key>
+		<string>Keyboard LeftShift</string>
+		<key>E2</key>
+		<string>Keyboard LeftAlt</string>
+		<key>E3 </key>
+		<string>Keyboard Left GUI</string>
+		<key>E4</key>
+		<string>Keyboard RightControl</string>
+		<key>E5</key>
+		<string>Keyboard RightShift</string>
+		<key>E6</key>
+		<string>Keyboard RightAlt</string>
+		<key>E7</key>
+		<string>Keyboard Right GUI</string>
+	</dict>
 	<key>0x08</key>
 	<dict>
 		<key>00</key>

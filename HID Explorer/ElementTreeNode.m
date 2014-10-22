@@ -11,20 +11,19 @@
 #import "ElementTreeNode.h"
 #import "HXUsageTableTranslator.h"
 
-
 @implementation ElementTreeNode
 
 @dynamic name;
 - (NSString *)name
 {
-	HIDElement *element = (HIDElement *)self.representedObject;
+	HIDElement *element = self.representedObject;
 	return element.name;
 }
 
 @dynamic type;
 - (NSString *)type
 {
-	HIDElement *element = (HIDElement *)self.representedObject;
+	HIDElement *element = self.representedObject;
 	IOHIDElementType type = element.type;
 	
 	NSString *ret;
@@ -73,7 +72,7 @@
 @dynamic cookie;
 - (NSUInteger)cookie
 {
-	HIDElement *element = (HIDElement *)self.representedObject;
+	HIDElement *element = self.representedObject;
 	return (NSUInteger)element.cookie;
 }
 
@@ -124,15 +123,33 @@
 @dynamic usagePage;
 - (NSString *)usagePage
 {
-	HIDElement *element = (HIDElement *)self.representedObject;
+	HIDElement *element = self.representedObject;
 	return [HXUsageTableTranslator nameForUsagePage:element.usagePage];
 }
 
 @dynamic usageID;
 - (NSString *)usageID
 {
-	HIDElement *element = (HIDElement *)self.representedObject;
+	HIDElement *element = self.representedObject;
 	return [HXUsageTableTranslator nameForUsagePage:element.usagePage usageID:element.usage];
 }
+
+@dynamic value;
+- (NSString *)value
+{
+	HIDElement *element = self.representedObject;
+	
+	if (element.byteValue)
+	{
+		return @"Bytes";
+	}
+	else
+	{
+		return element.integerValue;
+	}
+	
+	return nil;
+}
+
 
 @end

@@ -18,7 +18,8 @@
 
 - (IBAction)toggleSidebar:(id)sender
 {
-	
+	NSSplitViewItem *sidebar = self.splitViewItems[0];
+	sidebar.animator.collapsed = !(sidebar.collapsed);
 }
 
 @end

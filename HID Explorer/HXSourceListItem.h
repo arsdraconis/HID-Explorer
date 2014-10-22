@@ -27,5 +27,6 @@
 + (instancetype)findNodeInArray:(NSArray *)array withGroupName:(NSString *)name;
 + (HXSourceListItem *)insertDevice:(HIDDevice *)device intoTree:(NSArray *)rootArray;
 + (void)removeNodeWithDevice:(HIDDevice *)device inTree:(NSMutableArray *)rootArray;
++ (void)sortTree:(NSMutableArray *)rootArray;
 
 @end

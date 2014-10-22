@@ -98,9 +98,12 @@
 	{
 		branch = [HXSourceListItem itemWithGroupName:transport children:nil];
 		[rootArray addObject:branch];
+		[self sortTree:rootArray];
 	}
 	
-	[[branch mutableArrayValueForKey:@"children"] addObject:item];
+	NSMutableArray *branchChildren = [branch mutableArrayValueForKey:@"children"];
+	[branchChildren addObject:item];
+	[self sortTree:branchChildren];
 	
 	return branch;
 }
@@ -132,6 +135,14 @@
 	{
 		[rootArray removeObject:branch];
 	}
+}
+
++ (void)sortTree:(NSMutableArray *)rootArray
+{
+	[rootArray sortUsingComparator: ^NSComparisonResult(HXSourceListItem *obj1, HXSourceListItem *obj2)
+	{
+		return [obj1.name localizedCaseInsensitiveCompare:obj2.name];
+	}];
 }
 
 @end

@@ -596,7 +596,16 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="0Fu-UM-wZU"/>
-                                        <menuItem title="Show Device List" keyEquivalent="0" id="FOn-0j-43s"/>
+                                        <menuItem title="Show Device List" keyEquivalent="0" id="FOn-0j-43s">
+                                            <connections>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="ER9-ec-uoQ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Refresh Devices" keyEquivalent="r" id="cge-dU-qHY">
+                                            <connections>
+                                                <action selector="refreshDevices:" target="Ady-hI-5gd" id="Hk2-DK-uw6"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>

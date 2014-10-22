@@ -13,8 +13,5 @@
 @interface HXElementInspectorViewController : NSViewController <NSOutlineViewDelegate>
 
 @property HIDElement *selectedElement;
-@property NSString *usagePage;
-@property NSString *usageID;
-
 
 @end

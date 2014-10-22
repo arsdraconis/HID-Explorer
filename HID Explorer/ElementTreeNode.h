@@ -13,7 +13,6 @@
 @property (readonly) NSString *name;
 @property (readonly) NSString *type;
 @property (readonly) NSUInteger cookie;
-@property (readonly) NSString *value;
 
 @property (readonly) NSString *usagePage;
 @property (readonly) NSString *usageID;

@@ -134,22 +134,6 @@
 	return [HXUsageTableTranslator nameForUsagePage:element.usagePage usageID:element.usage];
 }
 
-@dynamic value;
-- (NSString *)value
-{
-	HIDElement *element = self.representedObject;
-	
-	if (element.byteValue)
-	{
-		return @"Bytes";
-	}
-	else
-	{
-		return element.integerValue;
-	}
-	
-	return nil;
-}
 
 
 @end

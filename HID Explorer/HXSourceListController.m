@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 ars draconis. All rights reserved.
 //
 
+
+// FIXME: We can seriously refactor the source list methods into something else,
+// perhaps a category, to clean this up.
+
 #import "HXSourceListController.h"
 #import "HXSourceListItem.h"
 #import <HIDKit/HIDKit.h>
@@ -43,11 +47,10 @@
 											   object:nil];
 	
 	[HIDManager sharedManager];
-}
-
-- (void)viewWillAppear
-{
-	[self refreshDevices:self];
+	
+	// Expand our source list and select a valid item.
+	[self expandGroupItem:nil];
+	[self selectAdjacentItem];
 }
 
 - (void)dealloc
@@ -74,13 +77,7 @@
 		[HXSourceListItem insertDevice:device intoTree:listItems];
 	}
 	
-	// Using GCD to queue this at the end of the current run loop iteration.
-	dispatch_async(dispatch_get_main_queue(),
-	^{
-		[self.sourceList expandItem:nil expandChildren:YES];
-		[self.sourceList selectRowIndexes:[NSIndexSet indexSetWithIndex:1]
-					 byExtendingSelection:NO];
-	});
+	[HXSourceListItem sortTree:listItems];
 }
 
 - (void)deviceDidConnect:(NSNotification *)note
@@ -89,6 +86,7 @@
 	
 	NSMutableArray *listItems = [self mutableArrayValueForKey:@"sourceListItems"];
 	id item = [HXSourceListItem insertDevice:note.object intoTree:listItems];
+	
 	[self expandGroupItem:item];
 }
 
@@ -109,7 +107,7 @@
 //------------------------------------------------------------------------------
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
-	HXSourceListItem *node = (HXSourceListItem *)item;
+	HXSourceListItem *node = item;
 	if (!node.isLeaf)
 	{
 		return [outlineView makeViewWithIdentifier:@"HeaderCell" owner:self];
@@ -122,13 +120,13 @@
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
 {
-	HXSourceListItem *node = (HXSourceListItem *)item;
+	HXSourceListItem *node = item;
 	return !node.isLeaf;
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item
 {
-	HXSourceListItem *node = (HXSourceListItem *)item;
+	HXSourceListItem *node = item;
 	return node.isLeaf;
 }
 
@@ -138,6 +136,10 @@
 	self.parentViewController.representedObject = selection.device;
 }
 
+
+//------------------------------------------------------------------------------
+#pragma mark Outline View Control
+//------------------------------------------------------------------------------
 - (void)expandGroupItem:(HXSourceListItem *)item
 {
 	// Using GCD to queue it at the end of the current run loop iteration.
@@ -145,6 +147,20 @@
 	^{
 		[self.sourceList expandItem:item expandChildren:YES];
 	});
+}
+
+- (void)selectAdjacentItem
+{
+	// FIXME: Implement this.
+	// This only selects the first item in the list for now. What it SHOULD do
+	// is select the item adjent to the one that was previously selected, and
+	// default to the first item if nothing was selected.
+	dispatch_async(dispatch_get_main_queue(),
+	^{
+		[self.sourceList selectRowIndexes:[NSIndexSet indexSetWithIndex:1]
+					 byExtendingSelection:NO];
+	});
+
 }
 
 

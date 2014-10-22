@@ -124,7 +124,7 @@ static const NSString * HXUSBHIDUsageTablesPlistFilename = @"USB HID Usage Table
 		}
 	}
 	
-	return [NSString stringWithFormat:@"0x%04lX %@", (unsigned long)usagePage, humanName];
+	return [NSString stringWithFormat:@"0x%04lX %@", (unsigned long)usageID, humanName];
 }
 
 

@@ -36,6 +36,9 @@
 	[super viewDidLoad];
 	
 	self.sourceListItems = [NSMutableArray array];
+	
+	self.sidebarTreeController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(deviceDidConnect:)
 												 name:HIDManagerDeviceDidConnectNotification
@@ -77,7 +80,7 @@
 		[HXSourceListItem insertDevice:device intoTree:listItems];
 	}
 	
-	[HXSourceListItem sortTree:listItems];
+//	[HXSourceListItem sortTree:listItems];
 }
 
 - (void)deviceDidConnect:(NSNotification *)note

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SPi-Rn-N7U">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SPi-Rn-N7U">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -825,6 +825,7 @@
                                             <connections>
                                                 <binding destination="JPv-iH-vCe" name="content" keyPath="arrangedObjects" id="RNa-0M-TQc"/>
                                                 <binding destination="JPv-iH-vCe" name="selectionIndexPaths" keyPath="selectionIndexPaths" previousBinding="RNa-0M-TQc" id="X5h-VE-kYb"/>
+                                                <binding destination="JPv-iH-vCe" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="X5h-VE-kYb" id="RWK-DI-4xu"/>
                                                 <outlet property="delegate" destination="Ymo-s2-XoG" id="B25-NG-tfA"/>
                                             </connections>
                                         </outlineView>
@@ -1628,6 +1629,51 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
+                                                <tableColumn width="60" minWidth="60" maxWidth="75" id="kKk-En-dSR">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Report ID">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="zV4-9n-EaV">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="p8G-u7-CI0">
+                                                            <rect key="frame" x="382" y="1" width="60" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBn-Nz-lNt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="mEZ-xk-eqi">
+                                                                        <customFormatter key="formatter" id="TTB-33-UvU" customClass="adHexFormatter"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="p8G-u7-CI0" name="value" keyPath="objectValue.representedObject.reportID" id="Auz-GI-Fha">
+                                                                            <dictionary key="options">
+                                                                                <string key="NSNullPlaceholder">Unknown</string>
+                                                                            </dictionary>
+                                                                        </binding>
+                                                                    </connections>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="qBn-Nz-lNt" firstAttribute="centerX" secondItem="p8G-u7-CI0" secondAttribute="centerX" id="kly-CE-eRJ"/>
+                                                                <constraint firstItem="qBn-Nz-lNt" firstAttribute="centerY" secondItem="p8G-u7-CI0" secondAttribute="centerY" id="qSh-Vm-d1y"/>
+                                                                <constraint firstItem="qBn-Nz-lNt" firstAttribute="leading" secondItem="p8G-u7-CI0" secondAttribute="leading" constant="2" id="v2t-RB-JOP"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="textField" destination="qBn-Nz-lNt" id="DhT-ez-ASF"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
                                                 <tableColumn width="60" minWidth="60" maxWidth="75" id="On0-su-cFV">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Cookie">
                                                         <font key="font" metaFont="smallSystem"/>
@@ -1698,7 +1744,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="5wv-Rd-H7l" name="value" keyPath="objectValue.representedObject.integerValue" id="iu4-tK-Za7">
+                                                                        <binding destination="5wv-Rd-H7l" name="value" keyPath="objectValue.representedObject.value.byteValue" id="DUd-I1-bOC">
                                                                             <dictionary key="options">
                                                                                 <string key="NSMultipleValuesPlaceholder">Multiple</string>
                                                                                 <string key="NSNotApplicablePlaceholder">N/A</string>
@@ -2329,6 +2375,34 @@
                                     </binding>
                                 </connections>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIg-QK-JDF">
+                                <rect key="frame" x="14" y="178" width="110" height="32"/>
+                                <buttonCell key="cell" type="push" title="Read Value" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dxY-ZM-VY8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="readValue:" target="1h0-WV-coV" id="nzr-y5-Vw1"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AM1-ge-f2i">
+                                <rect key="frame" x="14" y="145" width="109" height="32"/>
+                                <buttonCell key="cell" type="push" title="Write Value" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ikj-QA-mjj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="writeValue:" target="1h0-WV-coV" id="C3V-a7-XrY"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svj-lY-LA8">
+                                <rect key="frame" x="127" y="151" width="96" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="qOW-Hi-Pne">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Lat-JD-Bm4" secondAttribute="bottom" constant="20" symbolic="YES" id="05E-Cg-dDV"/>
@@ -2390,6 +2464,7 @@
                         <outlet property="elementsOutlineView" destination="sgp-Eb-5dl" id="PK2-0l-G3j"/>
                         <outlet property="elementsTreeController" destination="cMF-xd-IF4" id="HQ9-KE-J7z"/>
                         <outlet property="liveUpdateCheckbox" destination="dXr-cW-RdK" id="XXC-vy-v3E"/>
+                        <outlet property="valueTextField" destination="svj-lY-LA8" id="bIk-e0-swE"/>
                     </connections>
                 </viewController>
                 <customObject id="PHa-St-JJz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -98,12 +98,12 @@
 	{
 		branch = [HXSourceListItem itemWithGroupName:transport children:nil];
 		[rootArray addObject:branch];
-		[self sortTree:rootArray];
+//		[self sortTree:rootArray];
 	}
 	
 	NSMutableArray *branchChildren = [branch mutableArrayValueForKey:@"children"];
 	[branchChildren addObject:item];
-	[self sortTree:branchChildren];
+//	[self sortTree:branchChildren];
 	
 	return branch;
 }

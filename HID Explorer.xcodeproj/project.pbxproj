@@ -15,9 +15,9 @@
 		1671452719C041F4008881D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1671452619C041F4008881D3 /* Images.xcassets */; };
 		1671452A19C041F4008881D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1671452819C041F4008881D3 /* Main.storyboard */; };
 		1671453619C041F4008881D3 /* HID_ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671453519C041F4008881D3 /* HID_ExplorerTests.m */; };
-		1671454019C04206008881D3 /* HIDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; };
-		1671454219C0425A008881D3 /* HIDKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1671453F19C04206008881D3 /* HIDKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		16764DB019E7D50900B2BCD0 /* USB HID Usage Tables.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16764DAF19E7D50900B2BCD0 /* USB HID Usage Tables.plist */; };
+		1678235B1A6998FE00064B83 /* HIDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1678235A1A6998FE00064B83 /* HIDKit.framework */; };
+		1678235C1A69990700064B83 /* HIDKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 1678235A1A6998FE00064B83 /* HIDKit.framework */; };
 		1687C74819EE7CAF008D2B1A /* HXSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1687C74719EE7CAF008D2B1A /* HXSplitViewController.m */; };
 		16AEF19B19E8286B00A7A79D /* HXUsageTableTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEF19A19E8286B00A7A79D /* HXUsageTableTranslator.m */; };
 		16CD259419E683BB00FEBC88 /* adHexFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CD259319E683BB00FEBC88 /* adHexFormatter.m */; };
@@ -34,19 +34,6 @@
 			remoteInfo = "HID Explorer";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		1671454119C0424C008881D3 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1671454219C0425A008881D3 /* HIDKit.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1625813E19E4014D000A0ADF /* ElementTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementTreeNode.h; sourceTree = "<group>"; };
@@ -67,6 +54,7 @@
 		1671453519C041F4008881D3 /* HID_ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HID_ExplorerTests.m; sourceTree = "<group>"; };
 		1671453F19C04206008881D3 /* HIDKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDKit.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug/HIDKit.framework"; sourceTree = "<group>"; };
 		16764DAF19E7D50900B2BCD0 /* USB HID Usage Tables.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "USB HID Usage Tables.plist"; sourceTree = "<group>"; };
+		1678235A1A6998FE00064B83 /* HIDKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/OS_X_Controllers-dbcwvxgzoxkumifzhtdrfrtkmaaf/Build/Products/Debug/HIDKit.framework"; sourceTree = "<group>"; };
 		1687C74619EE7CAF008D2B1A /* HXSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSplitViewController.h; sourceTree = "<group>"; };
 		1687C74719EE7CAF008D2B1A /* HXSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSplitViewController.m; sourceTree = "<group>"; };
 		16AEF19919E8286B00A7A79D /* HXUsageTableTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUsageTableTranslator.h; sourceTree = "<group>"; };
@@ -84,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1671454019C04206008881D3 /* HIDKit.framework in Frameworks */,
+				1678235B1A6998FE00064B83 /* HIDKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +112,7 @@
 		1671451019C041F4008881D3 = {
 			isa = PBXGroup;
 			children = (
+				1678235A1A6998FE00064B83 /* HIDKit.framework */,
 				1671451B19C041F4008881D3 /* HID Explorer */,
 				1671453219C041F4008881D3 /* HID ExplorerTests */,
 				1671451A19C041F4008881D3 /* Products */,
@@ -199,7 +188,6 @@
 				1671451519C041F4008881D3 /* Sources */,
 				1671451619C041F4008881D3 /* Frameworks */,
 				1671451719C041F4008881D3 /* Resources */,
-				1671454119C0424C008881D3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -270,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1678235C1A69990700064B83 /* HIDKit.framework in Resources */,
 				1671452719C041F4008881D3 /* Images.xcassets in Resources */,
 				1671452A19C041F4008881D3 /* Main.storyboard in Resources */,
 				16764DB019E7D50900B2BCD0 /* USB HID Usage Tables.plist in Resources */,
@@ -417,6 +406,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OS_X_Controllers-dbcwvxgzoxkumifzhtdrfrtkmaaf/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = "HID Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -432,6 +422,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OS_X_Controllers-asvjnfqilrsjgqeqkysrbtrklxbr/Build/Products/Debug",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OS_X_Controllers-dbcwvxgzoxkumifzhtdrfrtkmaaf/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = "HID Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
